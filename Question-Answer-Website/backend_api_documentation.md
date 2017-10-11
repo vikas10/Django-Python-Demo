@@ -511,7 +511,16 @@ Response:
   }
 }
 ```
-
+Make error response and status
+```
+{
+  "meta": "",
+  "data": {
+    "error_message": "",
+    "error_type": ""
+  }
+}
+```
 10.
 API Name: Test Leads API
 Status: Need to be discuss URL
@@ -536,7 +545,7 @@ Response:
   "data": {
     "sample_test_paper":"Multipart PDF File",
     "message":"Thanks for trying Us"
-  
+
 }
 ```
 
@@ -553,19 +562,24 @@ Request:
   "password":"password123"
 }
 ``` 
-Response:
-
-Should we make 2 cases for this api, one with the error and the other without it  
+Response: 
 ```
 {
   "meta": "",
   "data": {
-    "error": {
-      "in_field": "email",
-      "message": "User not in database"
-    },
     "customer_id": 101,
     "session_id": "logikids_101_Ad10w9TSOLRlH0tI6clnA8KXchFXd3kl"
+  }
+}
+```
+
+Make error response and status
+```
+{
+  "meta": "",
+  "data": {
+    "error_message": "",
+    "error_type": ""
   }
 }
 ```
@@ -591,11 +605,21 @@ Response:
   }
 }
 ```
+Make error response and status
+```
+{
+  "meta": "",
+  "data": {
+    "error_message": "",
+    "error_type": ""
+  }
+}
+```
 
 13.1
 API Name: Reset Password API
 Status: Need to be discuss URL
-URL: /user/forgot_password/
+URL: /user/forgot_password_link/
 Method: GET
 Header: Platform-Header
 Request: Query Params
@@ -609,11 +633,20 @@ Response:
   }
 }
 ```
-
+Make error response and status
+```
+{
+  "meta": "",
+  "data": {
+    "error_message": "",
+    "error_type": ""
+  }
+}
+```
 13.2
 API Name: Reset Password API
 Status: Need to be discuss URL
-URL: /user/forgot_password/
+URL: /user/forgot_password_link/
 Method: POST
 Header: Platform-Header
 Request:
@@ -662,14 +695,38 @@ Response:
 {
   "meta": "",
   "data": {
-    "customer_id": 123,
-    "full_name": "Nimesh Kiran Verma",
-    "mobile_number": "9911616971",
-    "email": "nimesh.aug11@gmail.com",
-    "city_id": 1,
-    "class_id": 1,
-    "school": "St Xaviers Sr Sec School",
-    "profile_pic": "https://9gag.com/gag/a5nEdzg"
+    "customer_id": {
+      "value": 123,
+      "is_editable": false
+    },
+    "full_name": {
+      "value": "Nimesh Kiran Verma",
+      "is_editable": true
+    },
+    "mobile_number": {
+      "value": "9911616971",
+      "is_editable": true
+    },
+    "email": {
+      "value": "nimesh.aug11@gmail.com",
+      "is_editable": true
+    },
+    "city_id": {
+      "value": 1,
+      "is_editable": true
+    },
+    "class_id": {
+      "value": 1,
+      "is_editable": false
+    },
+    "school": {
+      "value": "St Xaviers Sr Sec School",
+      "is_editable": true
+    },
+    "profile_pic": {
+      "value": "https://9gag.com/gag/a5nEdzg",
+      "is_editable": true
+    }
   }
 }
 ```
@@ -687,41 +744,41 @@ Response:
   "meta": "",
   "data": {
     "customer_id": {
-      "data": 123,
+      "value": 123,
       "is_editable": false
     },
     "full_name": {
-      "data": "Nimesh Kiran Verma",
+      "value": "Nimesh Kiran Verma",
       "is_editable": true
     },
     "mobile_number": {
-      "data": "9911616971",
+      "value": "9911616971",
       "is_editable": true
     },
     "email": {
-      "data": "nimesh.aug11@gmail.com",
+      "value": "nimesh.aug11@gmail.com",
       "is_editable": true
     },
     "city_id": {
-      "data": 1,
+      "value": 1,
       "is_editable": true
     },
     "class_id": {
-      "data": 1,
+      "value": 1,
       "is_editable": false
     },
     "school": {
-      "data": "St Xaviers Sr Sec School",
+      "value": "St Xaviers Sr Sec School",
       "is_editable": true
     },
     "profile_pic": {
-      "data": "https://9gag.com/gag/a5nEdzg",
+      "value": "https://9gag.com/gag/a5nEdzg",
       "is_editable": true
     }
   }
 }
 ```
-
+Put can be removed
 14.3
 API Name: Profile API
 Status: Need to be discuss URL
@@ -840,71 +897,34 @@ Request: Query Params None
 Response:
 ```
 {
-  "meta": "",
-  "data": {
-    "wallet": {
-      "balance": 0
-    },
-    "refer_message": {
-      "whatsapp": "whatsapp://send?text=Hi - wanted to share this very interesting Logical Reasoning Competition designed by IIT-IIM alumni, to initiate kids into logical thinking.  I think it provides a great exposure to kids. %0aThe exam is designed to stimulate the analytical thinking in kids and is conducted for SrKG to Class 9 kids. For Sr KG and Grade 1 kids, their invigilators read and explain the question to kids.%0aYou could DOWNLOAD a FREE SAMPLE PAPER from the link below: https://www.logiqids.com/user/register?c=Nimesh773",
-      "facebook": "https://www.facebook.com/v2.3/dialog/feed?app_id=1855999688021475&caption=Logiqids.com&description=%20Download%20Free%20Sample%20Paper%20for%20LogIQids%20Logical%20Reasoning%20Exam%20.&link=https://www.logiqids.com/user/register?c=Nimesh773&name=Must%20Try%20For%20Parents%20of%205%20to%2012%20Year%20Old%20Children!&picture=https://www.logiqids.com/images/LogIQids_FB_final1.png",
-      "sms": "sms:?body=Hi - wanted to share this very interesting Logical Reasoning Competition designed by IIT-IIM alumni, to initiate kids into logical thinking.  I think it provides a great exposure to kids. %0aThe exam is designed to stimulate the analytical thinking in kids and is conducted for SrKG to Class 9 kids. For Sr KG and Grade 1 kids, their invigilators read and explain the question to kids.%0aYou could DOWNLOAD a FREE SAMPLE PAPER from the link below: https://www.logiqids.com/user/register?c=Nimesh773"
-    }
-  }
+	"meta": "",
+	"data": {
+		"wallet": {
+			"name": "Wallet balance",
+			"balance": 11
+		},
+		"referral_earnings": 100,
+		"referral_message": {
+			"email": {
+				"subject": "somehtinhfcnd",
+				"body": "Hi - wanted to share this very interesting Logical Reasoning Competition designed by IIT-IIM alumni, to initiate kids into logical thinking.  I think it provides a great exposure to kids. %0aThe exam is designed to stimulate the analytical thinking in kids and is conducted for SrKG to Class 9 kids. For Sr KG and Grade 1 kids, their invigilators read and explain the question to kids.%0aYou could DOWNLOAD a FREE SAMPLE PAPER from the link below: https://www.logiqids.com/user/register?c=Nimesh773"
+			},
+			"facebook": {
+				"message": "https://www.facebook.com/v2.3/dialog/feed?app_id=1855999688021475&caption=Logiqids.com&description=%20Download%20Free%20Sample%20Paper%20for%20LogIQids%20Logical%20Reasoning%20Exam%20.&link=https://www.logiqids.com/user/register?c=Nimesh773&name=Must%20Try%20For%20Parents%20of%205%20to%2012%20Year%20Old%20Children!&picture=https://www.logiqids.com/images/LogIQids_FB_final1.png"
+			},
+			"sms": {
+				"message": "Hi - wanted to share this very interesting Logical Reasoning Competition designed by IIT-IIM alumni, to initiate kids into logical thinking.  I think it provides a great exposure to kids. %0aThe exam is designed to stimulate the analytical thinking in kids and is conducted for SrKG to Class 9 kids. For Sr KG and Grade 1 kids, their invigilators read and explain the question to kids.%0aYou could DOWNLOAD a FREE SAMPLE PAPER from the link below: https://www.logiqids.com/user/register?c=Nimesh773"
+			}
+		}
+	}
 }
 ```
 
 Note : Take a Tour Via JSON
 
-16.1
-API Name: Ask A Query API
-Status: Need to be discuss URL
-URL: /user/123/refer/
-Method: GET
-Header: Loggedin-Platform-Header
-Request: Query Params None
-Response:
-```
-{
-  "meta": "",
-  "data": {
-    "full_name": "Nimesh Kiran Verma",
-    "mobile_number": "9911616971",
-    "email": "nimesh.aug11@gmail.com"
-  }
-}
-```
 
-16.2
 API Name: Ask A Query API
-Status: Need to be discuss URL
-URL: /user/123/refer/
-Method: GET
-Header: Loggedin-Platform-Header
-Request: 
-```
-{
-  "meta": "",
-  "data": {
-    "full_name": "Nimesh Kiran Verma",
-    "mobile_number": "9911616971",
-    "email": "nimesh.aug11@gmail.com",
-    "category_id": 1,
-    "query":"Please Help" ,
-   "file_link": "https://9gag.com/gag/a5nEdzg"
-
-  }
-}
-```
-Response:
-```
-{
-  "meta": "",
-  "data": {
-    "message": "We will get back to you."
-  }
-}
-```
+Same as contact us api
 
 16.2
 API Name: User Product APIs
@@ -1083,8 +1103,8 @@ Request:
   23,
   24
   ],
-  "test": true,
-  "content": true
+//  "test": true,
+//  "content": true
 }
 ```
 Response:
@@ -1092,10 +1112,15 @@ Response:
 {
   "meta": "",
   "data": {
-    
+    "wallet":{
+        "balance":900,
+        "spendable":400,
+    },
+    "discount":200,
     "package_data": [
       {
         "id": 23,
+        "image_url":"jvhdsxkddsx",
         "name": "LogIQids Logical Reasoning Exam",
         "class_name": "Class 5",
         "academic_session": "2017-18",
@@ -1104,6 +1129,7 @@ Response:
       },
       {
         "id": 24,
+        "image_url":"jvhdsxkddsx",
         "name": "Content Package",
         "class_name": "Class 5",
         "academic_session": "2017-18",
@@ -1116,15 +1142,14 @@ Response:
 ```
  
 18
-API Name: Order Review API
+API Name: Coupon API
 Status: Need to be discuss URL
-URL: /user/123/order/review/
+URL: /coupon/
 Method: POST
 Header: Loggedin-Platform-Header
 Request:
 ```
 {
-  "order_id": 12,
   "Coupon_code": LOGIQ100,
 }
 ```
@@ -1134,8 +1159,34 @@ Response:
   "meta": "",
   "data": {
     "valid_request": true or false,
-"valid_request" 
+    "price":3000
+  }
+}
+```
 
+API Name: Checkout API
+Status: Need to be discuss URL
+URL: /user/123/checkout/
+Method: POST
+Header: Loggedin-Platform-Header
+Request:
+```
+{
+ "package_ids": [
+      23,
+      24
+  ],
+  "coupon_code": "LOGIQ100",
+  "wallet_applied":true
+}
+```
+Response:
+```
+{
+  "meta": "",
+  "data": {
+    "order_id": 1,
+    "amount": 1212
   }
 }
 ```
@@ -1163,6 +1214,10 @@ Response:
   }
 }
 ```
+
+
+
+
 
 20
 API Name: Weekly leaderboard API
