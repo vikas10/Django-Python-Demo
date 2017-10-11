@@ -5,6 +5,8 @@
         - homepage_div
         - class_div
         - contact_div
+        - city_id list
+        
         Eg:
 ```
         {
@@ -168,7 +170,8 @@ Request:
 {
     "name" : "Nimesh Verma",
     "email" : "nimesh.aug11@gmail.com",
-  "mobile" : "9911616971",
+    "mobile" : "9911616971",
+    "city":"Mumbai",
     "query : "Can I get test package for my 9 month baby?",
     "captcha_valid" : true,
   }
@@ -180,127 +183,6 @@ Response:
     "meta" : "",
     "data" : {
         "message":"Your query has been submitted, We will get back to you ASAP"
-  }
-}
-```
-
-4.
-API Name: FAQ API
-Status: Need to be discuss the URL
-URL: /company/faqs/
-Method: GET
-Header: Platform-Header
-Request: No Query Params
-Response:
-```
-{
-  "meta": "",
-  "data": {
-    "contact": {
-      "contact_introduction": "Have a query? Reach out to us and we'll respond within 48 working hours. Customer feedback is very valuable to us.We encourage you to share your suggestions and promise to do our best to maximize your experience with us.",
-      "address": [
-        "CampusConnect Technologies Private limited 105 A Wing 1st floor, Kanara Business Center, Sawali Society, Laxmi Nagar Ghatkopar East, Mumbai – 400075"
-    ],
-      "email": [
-        "support@logiqids.com"
-    ],
-      "phone": [
-        "+ 91 7045345345",
-        "+ 91 8080809604"
-    ],
-      "availablity": "Monday to Friday (10:00 am to 7:00 pm)",
-      "twitter": "https://www.twitter.com/logikids",
-      "facebook": "https://www.facebook.com/logikids",
-      "linkedin": "https://www.linkedin.com/logikids",
-      "google": "https://www.google.com/logikids",
-      "youtube": "https://www.youtube.com/logikids"
-  },
-    "faqs": [
-    {
-        "category": "General",
-        "data": [
-        {
-            "question": "What is LogIQids?",
-            "answer": "LogIQids is a first of its kind customized tool to enhance the Logical Reasoning skills in kids in the most structured way possible. Logical reasoning is a very important skill-set which is not taught in school. With LogIQids we provide a structured and personalized way to develop this skill in school going children."
-        },
-        {
-            "question": "What is LogIQids?",
-            "answer": "LogIQids is a first of its kind customized tool to enhance the Logical Reasoning skills in kids in the most structured way possible. Logical reasoning is a very important skill-set which is not taught in school. With LogIQids we provide a structured and personalized way to develop this skill in school going children."
-        },
-        {
-            "question": "What is LogIQids?",
-            "answer": "LogIQids is a first of its kind customized tool to enhance the Logical Reasoning skills in kids in the most structured way possible. Logical reasoning is a very important skill-set which is not taught in school. With LogIQids we provide a structured and personalized way to develop this skill in school going children."
-        },
-        {
-            "question": "What is LogIQids?",
-            "answer": "LogIQids is a first of its kind customized tool to enhance the Logical Reasoning skills in kids in the most structured way possible. Logical reasoning is a very important skill-set which is not taught in school. With LogIQids we provide a structured and personalized way to develop this skill in school going children."
-        }
-      ]
-    },
-    {
-        "category": "Features",
-        "data": [
-        {
-          "question": "What are the key skill-sets LogIQids endeavours to improve?",
-            "answer": "The entire Logical Reasoning curriculum has been divided into six different skillsets which are honed and developed over a period of time."
-        },
-          {
-            "question": "What are the key skill-sets LogIQids endeavours to improve?",
-            "answer": "The entire Logical Reasoning curriculum has been divided into six different skillsets which are honed and developed over a period of time."
-        },
-        {
-            "question": "What are the key skill-sets LogIQids endeavours to improve?",
-            "answer": "The entire Logical Reasoning curriculum has been divided into six different skillsets which are honed and developed over a period of time."
-        },
-        {
-            "question": "What are the key skill-sets LogIQids endeavours to improve?",
-            "answer": "The entire Logical Reasoning curriculum has been divided into six different skillsets which are honed and developed over a period of time."
-        }
-      ]
-    },
-    {
-        "category": "Pricing & Payments",
-        "data": [
-        {
-            "question": "Is the fee refundable?",
-            "answer": "100% money back guarantee if you cancel within 15 days of your purchase. After that, there will be no refund of fee. Kindly note that this option is valid only for the Content Subscription only and there should be a minimum of 45 days left before the expiry of the subscription."
-        },
-        {
-            "question": "Is the fee refundable?",
-            "answer": "100% money back guarantee if you cancel within 15 days of your purchase. After that, there will be no refund of fee. Kindly note that this option is valid only for the Content Subscription only and there should be a minimum of 45 days left before the expiry of the subscription."
-        },
-        {
-            "question": "Is the fee refundable?",
-            "answer": "100% money back guarantee if you cancel within 15 days of your purchase. After that, there will be no refund of fee. Kindly note that this option is valid only for the Content Subscription only and there should be a minimum of 45 days left before the expiry of the subscription."
-        },
-        {
-            "question": "Is the fee refundable?",
-            "answer": "100% money back guarantee if you cancel within 15 days of your purchase. After that, there will be no refund of fee. Kindly note that this option is valid only for the Content Subscription only and there should be a minimum of 45 days left before the expiry of the subscription."
-        }
-      ]
-    },
-    {
-        "category": "For Test",
-        "data": [
-        {
-            "question": "What will happen after I make the booking?",
-            "answer": "You will get a welcome email from LogIQids within 2 working days confirming your registration. The email will contain your login details (username and password) and schedule for upload of sample papers (total 4) and topic notes (total 5) to your account."
-        },
-        {
-            "question": "What will happen after I make the booking?",
-            "answer": "You will get a welcome email from LogIQids within 2 working days confirming your registration. The email will contain your login details (username and password) and schedule for upload of sample papers (total 4) and topic notes (total 5) to your account."
-        },
-        {
-            "question": "What will happen after I make the booking?",
-            "answer": "You will get a welcome email from LogIQids within 2 working days confirming your registration. The email will contain your login details (username and password) and schedule for upload of sample papers (total 4) and topic notes (total 5) to your account."
-        },
-        {
-            "question": "What will happen after I make the booking?",
-            "answer": "You will get a welcome email from LogIQids within 2 working days confirming your registration. The email will contain your login details (username and password) and schedule for upload of sample papers (total 4) and topic notes (total 5) to your account."
-        }
-      ]
-    }
-  ]
   }
 }
 ```
@@ -323,8 +205,6 @@ Response:
 }
 ``` 
 
-
-
 6.
 API Name: Pricing API
 Status: Need to be discuss the Usage and URL
@@ -342,208 +222,118 @@ Response:
       "bottom": "15-Days, No Questions Asked, Full Money-Back uarantee. (Valid only for he Content Subscription)"
     },
     "pricing": {
-      "features": {
-        "name": "Features Given:",
-        "data": [
+      "test": {
+        "image_url": "https://www.facebook.com/img/123",
+        "name": "Test",
+        "description": "Includes 4 sample papers and 5 Topic Notes",
+        "price": 550,
+        "offer": {
+          "price": 450,
+          "validity_date": "21/7/2017",
+          "text": "Early bird discount till"
+        },
+        "button_tex": "Buy Now",
+        "features": [
           {
-            "id": "1",
-            "description": "Lorem ipsum dolor sit ametconsectetur adipiscing elit sed doeiusmod tempor incidid"
+            "image_url": "https://www.facebook.com/img/123",
+            "status": true,
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
           },
           {
-            "id": "2",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
+            "image_url": "https://www.facebook.com/img/123",
+            "status": true,
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
           },
           {
-            "id": "3",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
+            "image_url": "https://www.facebook.com/img/123",
+            "status": true,
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
           },
           {
-            "id": "4",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
-          },
-          {
-            "id": "5",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
-          },
-          {
-            "id": "6",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
+            "image_url": "https://www.facebook.com/img/123",
+            "status": true,
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
           }
         ]
       },
-      "plans": [
-        {
-          "image_url": "https://www.facebook.com/img/123",
-          "name": "Test",
-          "price": 550,
-          "special_offer": {
-            "price": 450,
-            "validity_date": "21/7/17",
-            "text": "Early bird discount till"
+      "content": {
+        "image_url": "https://www.facebook.com/img/123",
+        "name": "Content",
+        "description": "dcdsc svfv",
+        "price": [
+          {
+            "period": "3 months",
+            "price": 900
           },
-          "footnote": "Includes 4 sample papers and 5 Topic Notes",
-          "features": {
-            "1": true,
-            "2": false,
-            "3": false,
-            "4": true,
-            "5": false,
-            "6": true
-          }
-        },
-        {
-          "image_url": "https://www.facebook.com/img/123",
-          "name": "Content",
-          "price_list": [
-            {
-              "period": "3 months",
-              "price": 900
-            },
-            {
-              "period": "6 months",
-              "price": 1400
-            },
-            {
-              "period": "1 year",
-              "price": 2200
-            }
-          ],
-          "footnote": "",
-          "features": {
-            "1": true,
-            "2": true,
-            "3": true,
-            "4": true,
-            "5": true,
-            "6": false
-          }
-        },
-        {
-          "image_url": "https://www.facebook.com/img/123",
-          "name": "Both Content and Test",
-          "price_list": [
-            {
-              "period": "3 months",
-              "price": 1350
-            },
-            {
-              "period": "6 months",
-              "price": 1850
-            },
-            {
-              "period": "1 year",
-              "price": 2650
-            }
-          ],
-          "discount": 10,
-          "footnote": "",
-          "features_text": "Both the features of Test and Content at"
-        }
-      ]
-    }
-  }
-}
-```
-
-Version 2 of this with feature redundancy
-```
-{
-  "meta": "",
-  "data": {
-    "message": {
-      "heading": "Simple & transparent pricing",
-      "bottom": "15-Days, No Questions Asked, Full Money-Back uarantee. (Valid only for he Content Subscription)"
-    },
-    "pricing": {
-      "plans": [
-        {
-          "image_url": "https://www.facebook.com/img/123",
-          "name": "Test",
-          "price": 550,
-          "special_offer": {
-            "price": 450,
-            "validity_date": "21/7/17",
-            "text": "Early bird discount till"
+          {
+            "period": "6 months",
+            "price": 1400
           },
-          "footnote": "Includes 4 sample papers and 5 Topic Notes",
-          "features": [
-            {
-              "status": true,
-              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
-            },
-            {
-              "status": true,
-              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
-            },
-            {
-              "status": true,
-              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
-            },
-            {
-              "status": true,
-              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
-            }
-          ]
-        },
-        {
-          "image_url": "https://www.facebook.com/img/123",
-          "name": "Content",
-          "price_list": [
-            {
-              "period": "3 months",
-              "price": 900
-            },
-            {
-              "period": "6 months",
-              "price": 1400
-            },
-            {
-              "period": "1 year",
-              "price": 2200
-            }
-          ],
-          "footnote": "",
-          "features": [
-            {
-              "status": true,
-              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
-            },
-            {
-              "status": false,
-              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
-            },
-            {
-              "status": true,
-              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
-            },
-            {
-              "status": false,
-              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
-            }
-          ]
-        },
-        {
-          "image_url": "https://www.facebook.com/img/123",
-          "name": "Both Content and Test",
-          "price_list": [
-            {
-              "period": "3 months",
-              "price": 1350
-            },
-            {
-              "period": "6 months",
-              "price": 1850
-            },
-            {
-              "period": "1 year",
-              "price": 2650
-            }
-          ],
-          "discount": 10,
-          "footnote": "",
-          "features_text": "Both the features of Test and Content at"
-        }
-      ]
+          {
+            "period": "1 year",
+            "price": 2200
+          }
+        ],
+        "button_tex": "Buy Now",
+        "features": [
+          {
+            "image_url": "https://www.facebook.com/img/123",
+            "status": true,
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
+          },
+          {
+            "image_url": "https://www.facebook.com/img/123",
+            "status": true,
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
+          },
+          {
+            "image_url": "https://www.facebook.com/img/123",
+            "status": true,
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
+          },
+          {
+            "image_url": "https://www.facebook.com/img/123",
+            "status": true,
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
+          }
+        ]
+      },
+      "test_and_content": {
+        "image_url": "https://www.facebook.com/img/123",
+        "name": "Content and Test",
+        "description": "ddwwdwdsa edewsds ",
+        "price": [
+          {
+            "period": "3 months",
+            "price": 900,
+            "offer_price": 800,
+            "validity_date": "21/7/2017",
+            "text": "10% Off"
+          },
+          {
+            "period": "6 months",
+            "price": 1400,
+            "offer_price": 800,
+            "validity_date": "21/7/2017",
+            "text": "10% Off"
+          },
+          {
+            "period": "9 months",
+            "price": 1800,
+            "offer_price": 800,
+            "validity_date": "21/7/2017",
+            "text": "10% Off"
+          }
+        ],
+        "button_tex": "Buy Now",
+        "features": [
+          {
+            "image_url": "https://www.facebook.com/img/123",
+            "status": true,
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
+          }
+        ]
+      }
     }
   }
 }
@@ -693,40 +483,7 @@ Response:
 }
 ```
 
-9.1
-API Name: Registration API
-Status: Need to be discuss URL
-URL: /user/registration/
-Method: GET
-Header: Platform-Header
-Request: queryparams = city_id
-Response:
-```
-{
-  "meta": "",
-  "data": {
-  "message": {
-    "heading": "Tentative test schedule:"
-  },
-  "test_schedule": [
-    {
-      "name": "Level 1:",
-      "image_url": "https://www.facebook.com/img/123",
-      "schedule": "Nov/Dec 2017",
-      "footnote": "(Exact date to depend on the centre)"
-    },
-    {
-      "name": "Level 2:",
-      "image_url": "https://www.facebook.com/img/123",
-      "schedule": "April 2018",
-      "footnote": "(Only for eligible candidates)"
-    }
-  ]
-  }
-}
-``` 
-
-9.2
+9
 API Name: Registration API
 Status: Need to be discuss URL
 URL: /user/registration/
