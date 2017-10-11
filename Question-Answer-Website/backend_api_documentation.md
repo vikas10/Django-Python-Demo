@@ -3,13 +3,13 @@
     This document aims to provide a general understanding of the backend APIs and its details.
 #### Definitions:
  - LoggedIn-Header:
- - A header is defined as LoggedIn-Header when the header has the session token in it. This type of header is used for the user who is the registered and has logged into the system.
-
-LoggedIn-Header JSON:
+    A header is defined as LoggedIn-Header when the header has the session token in it. This type of header is used for the user who is the registered and has logged into the system.
+    LoggedIn-Header JSON:
+```
 {
 "session_token":"logiqid_34_mYrmAIJA6TUDqfOvpfqez7fM9Mp11n2b"
 }
- 
+``` 
 The session_token value follows the given pattern:
 logiqid_<customer_id>_<uuid>
  
@@ -55,20 +55,9 @@ Meta-Data-Response:
 }
 }
  
- 
-
-
-
-
-
-
-
- 
-
-Miscellaneous APIs
+ ### Documentation
 1.
 API Name: Reviews API
-Status: Might not be required, need to be discussed
 URL: /products/review/
 Method: GET
 Header: Platform-Header
@@ -78,27 +67,14 @@ Response:
   "meta": "",
   "data": [
     {
+      "source_url": "https://www.fb.com/comment/123",
       "image_url": "https://www.facebook.com/img/123",
-      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo tempor incididunt utnsequat",
+  "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo tempor incididunt utnsequat",
       "reviewer": "Rita Singh"
     },
     {
-      "image_url": "https://www.facebook.com/img/123",
-      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo tempor incididunt utnsequat",
-      "reviewer": "Rita Singh"
-    },
-    {
-      "image_url": "https://www.facebook.com/img/123",
-      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo tempor incididunt utnsequat",
-      "reviewer": "Rita Singh"
-    },
-    {
-      "image_url": "https://www.facebook.com/img/123",
-      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo tempor incididunt utnsequat",
-      "reviewer": "Rita Singh"
-    },
-    {
-      "image_url": "https://www.facebook.com/img/123",
+  "source_url": "https://www.fb.com/comment/123",        
+  "image_url": "https://www.facebook.com/img/123",
       "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo tempor incididunt utnsequat",
       "reviewer": "Rita Singh"
     }
@@ -146,38 +122,8 @@ Response:
 }
  
 3.1
-API Name: Contact Us API OLD DESIGN
-Status: Need to be discuss the URL
-URL: /company/contact/
-Method: GET
-Header: Platform-Header
-Request: No Query Params
-Response:
-{
-  "meta": "",
-  "data": {
-    "contact_introduction": "Have a query? Reach out to us and we'll respond within 48 working hours. Customer feedback is very valuable to us.We encourage you to share your suggestions and promise to do our best to maximize your experience with us.",
-    "address": [
-      "CampusConnect Technologies Private limited 105 A Wing 1st floor, Kanara Business Center, Sawali Society, Laxmi Nagar Ghatkopar East, Mumbai – 400075"
-  ],
-    "email": [
-      "support@logiqids.com"
-  ],
-    "phone": [
-    "+ 91 7045345345",
-    "+ 91 8080809604"
-  ],
-    "availablity": "Monday to Friday (10:00 am to 7:00 pm)",
-    "twitter": "https://www.twitter.com/logikids",
-    "facebook": "https://www.facebook.com/logikids",
-    "linkedin": "https://www.linkedin.com/logikids",
-    "google": "https://www.google.com/logikids",
-    "youtube": "https://www.youtube.com/logikids"
-  }
-}
- 
-3.1
-API Name: Contact Us API NEW DESIGN
+Deleted the old design for the contact us api
+API Name: Contact Us API 
 Status: Need to be discuss the URL
 URL: /company/contact/
 Method: GET
@@ -192,7 +138,8 @@ Response:
     "address": [
       "Campus Connect Technologies Private limited 105 A Wing 1st floor, Kanara Business Center, Sawali Society, Laxmi Nagar Ghatkopar East, Mumbai – 400075"
     ],
-   "email": [
+  "city": "Mumbai", 
+"email": [
         "support@logiqids.com"
     ],
     "phone": [
@@ -232,10 +179,6 @@ Response:
         "message":"Your query has been submitted, We will get back to you ASAP"
   }
 }
-
-
-
-
  
 4.
 API Name: FAQ API
@@ -356,9 +299,8 @@ Response:
   }
 }
  
- 
 5.
-API Name: Capcha API
+API Name: Captcha API
 Status: Need to be discuss the Usage and URL
 URL: /utility/captcha/
 Method: GET
@@ -389,102 +331,217 @@ Response:
   "data": {
     "message": {
       "heading": "Simple & transparent pricing",
-      "bottom": "15-Days, No Questions Asked, Full Money-Back Guarantee. (Valid only for the Content Subscription)"
+      "bottom": "15-Days, No Questions Asked, Full Money-Back uarantee. (Valid only for he Content Subscription)"
     },
-    "pricing":{
-      "features":{
-        "name":"Features Given:",
-        "data":[
+    "pricing": {
+      "features": {
+        "name": "Features Given:",
+        "data": [
           {
-            "id":"1",
-            "name": "Topic Notes",
+            "id": "1",
             "description": "Lorem ipsum dolor sit ametconsectetur adipiscing elit sed doeiusmod tempor incidid"
           },
           {
-            "id":"2",
-            "name": "Adaptive Worksheet",
+            "id": "2",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
           },
           {
-            "id":"3",
-            "name": "Skill Based Learning",
+            "id": "3",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
           },
           {
-            "id":"4",
-            "name": "In-Depth Analysis",
+            "id": "4",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
           },
           {
-            "id":"5",
-            "name": "Progress Review",
+            "id": "5",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
           },
           {
-            "id":"6",
-            "name": "First Level Test",
+            "id": "6",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
           }
         ]
       },
-    "plans": [
-      {
-        "image_url": "https://www.facebook.com/img/123",
-        "video_url": "https://www.facebook.com/img/123",
-        "name": "Test",
-        "price": 550,
-        "discount": 0,
-        "footnote": "Includes 4 sample papers and 5 Topic Notes",
-        "features": {
-          "1": true,
-          "2": false,
-          "3": false,
-          "4": true,
-          "5": false,
-          "6": true
+      "plans": [
+        {
+          "image_url": "https://www.facebook.com/img/123",
+          "name": "Test",
+          "price": 550,
+          "special_offer": {
+            "price": 450,
+            "validity_date": "21/7/17",
+            "text": "Early bird discount till"
+          },
+          "footnote": "Includes 4 sample papers and 5 Topic Notes",
+          "features": {
+            "1": true,
+            "2": false,
+            "3": false,
+            "4": true,
+            "5": false,
+            "6": true
           }
-      },
-      {
-        "image_url": "https://www.facebook.com/img/123",
-        "video_url": "https://www.facebook.com/img/123",
-        "name": "Content",
-        "price":900,
-        "discount":0,
-        "footnote": "",
-        "features": {
-          "1": true,
-          "2": true,
-          "3": true,
-          "4": true,
-          "5": true,
-          "6": false
+        },
+        {
+          "image_url": "https://www.facebook.com/img/123",
+          "name": "Content",
+          "price_list": [
+            {
+              "period": "3 months",
+              "price": 900
+            },
+            {
+              "period": "6 months",
+              "price": 1400
+            },
+            {
+              "period": "1 year",
+              "price": 2200
+            }
+          ],
+          "footnote": "",
+          "features": {
+            "1": true,
+            "2": true,
+            "3": true,
+            "4": true,
+            "5": true,
+            "6": false
           }
-      },
-      {
-        "image_url": "https://www.facebook.com/img/123",
-        "video_url": "https://www.facebook.com/img/123",
-        "name": "Test + Content",
-        "discount":0,
-        "footnote": "",
-        "features": {
-          "1": true,
-          "2": true,
-          "3": true,
-          "4": true,
-          "5": true,
-          "6": true
-          }
-      }
-    ]
+        },
+        {
+          "image_url": "https://www.facebook.com/img/123",
+          "name": "Both Content and Test",
+          "price_list": [
+            {
+              "period": "3 months",
+              "price": 1350
+            },
+            {
+              "period": "6 months",
+              "price": 1850
+            },
+            {
+              "period": "1 year",
+              "price": 2650
+            }
+          ],
+          "discount": 10,
+          "footnote": "",
+          "features_text": "Both the features of Test and Content at"
+        }
+      ]
+    }
   }
 }
+
+
+Version 2 of this with feature redundancy
+{
+  "meta": "",
+  "data": {
+    "message": {
+      "heading": "Simple & transparent pricing",
+      "bottom": "15-Days, No Questions Asked, Full Money-Back uarantee. (Valid only for he Content Subscription)"
+    },
+    "pricing": {
+      "plans": [
+        {
+          "image_url": "https://www.facebook.com/img/123",
+          "name": "Test",
+          "price": 550,
+          "special_offer": {
+            "price": 450,
+            "validity_date": "21/7/17",
+            "text": "Early bird discount till"
+          },
+          "footnote": "Includes 4 sample papers and 5 Topic Notes",
+          "features": [
+            {
+              "status": true,
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
+            },
+            {
+              "status": true,
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
+            },
+            {
+              "status": true,
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
+            },
+            {
+              "status": true,
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
+            }
+          ]
+        },
+        {
+          "image_url": "https://www.facebook.com/img/123",
+          "name": "Content",
+          "price_list": [
+            {
+              "period": "3 months",
+              "price": 900
+            },
+            {
+              "period": "6 months",
+              "price": 1400
+            },
+            {
+              "period": "1 year",
+              "price": 2200
+            }
+          ],
+          "footnote": "",
+          "features": [
+            {
+              "status": true,
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
+            },
+            {
+              "status": false,
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
+            },
+            {
+              "status": true,
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
+            },
+            {
+              "status": false,
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
+            }
+          ]
+        },
+        {
+          "image_url": "https://www.facebook.com/img/123",
+          "name": "Both Content and Test",
+          "price_list": [
+            {
+              "period": "3 months",
+              "price": 1350
+            },
+            {
+              "period": "6 months",
+              "price": 1850
+            },
+            {
+              "period": "1 year",
+              "price": 2650
+            }
+          ],
+          "discount": 10,
+          "footnote": "",
+          "features_text": "Both the features of Test and Content at"
+        }
+      ]
+    }
+  }
 }
 
-
  
  
-7.
-API Name: City API
+7.        API Name: City API
 Status: Need to be discuss URL
 URL: /utility/test/city/
 Method: GET
@@ -527,8 +584,7 @@ Response:
   ]
 }
 
-8.
-API Name: Class API
+8.        API Name: Class API
 Status: Need to be discuss URL
 URL: /user/class/
 Method: GET
@@ -589,6 +645,36 @@ Response:
     "supported": true
   }
   ]
+}
+
+API Name: Test Schedule API
+Status: Need to be discuss URL
+URL: /user/registration/
+Method: GET
+Header: Platform-Header
+Request: queryparams = city_id
+Response:
+{
+  "meta": "",
+  "data": {
+  "message": {
+    "heading": "Tentative test schedule:"
+  },
+  "test_schedule": [
+    {
+      "name": "Level 1:",
+      "image_url": "https://www.facebook.com/img/123",
+      "schedule": "Nov/Dec 2017",
+      "footnote": "(Exact date to depend on the centre)"
+    },
+    {
+      "name": "Level 2:",
+      "image_url": "https://www.facebook.com/img/123",
+      "schedule": "April 2018",
+      "footnote": "(Only for eligible candidates)"
+    }
+  ]
+  }
 }
  
 9.1
@@ -690,17 +776,19 @@ Request:
 }
  
 Response:
- 
- 
- 
+
+Should we make 2 cases for this api, one with the error and the other without it  
 {
   "meta": "",
   "data": {
+    "error": {
+      "in_field": "email",
+      "message": "User not in database"
+    },
     "customer_id": 101,
     "session_id": "logikids_101_Ad10w9TSOLRlH0tI6clnA8KXchFXd3kl"
   }
 }
- 
  
 12.
 API Name: Forgot Password API
@@ -804,6 +892,7 @@ Status: Need to be discuss URL
 URL: /user/profile/
 Method: POST
 Header: Loggedin-Platform-Header
+Why are we returning the same thing
 Request:
 {
   "customer_id": 123,
@@ -841,16 +930,41 @@ Response:
 {
   "meta": "",
   "data": {
-    "customer_id": 123,
-    "full_name": "Nimesh Kiran Verma",
-    "mobile_number": "9911616971",
-    "email": "nimesh.aug11@gmail.com",
-    "city_id": 1,
-    "class_id": 1,
-    "school": "St Xaviers Sr Sec School",
-    "profile_pic": "https://9gag.com/gag/a5nEdzg"
+    "customer_id": {
+      "data": 123,
+      "is_editable": false
+    },
+    "full_name": {
+      "data": "Nimesh Kiran Verma",
+      "is_editable": true
+    },
+    "mobile_number": {
+      "data": "9911616971",
+      "is_editable": true
+    },
+    "email": {
+      "data": "nimesh.aug11@gmail.com",
+      "is_editable": true
+    },
+    "city_id": {
+      "data": 1,
+      "is_editable": true
+    },
+    "class_id": {
+      "data": 1,
+      "is_editable": false
+    },
+    "school": {
+      "data": "St Xaviers Sr Sec School",
+      "is_editable": true
+    },
+    "profile_pic": {
+      "data": "https://9gag.com/gag/a5nEdzg",
+      "is_editable": true
+    }
   }
 }
+
 
 14.3
 API Name: Profile API
@@ -906,6 +1020,9 @@ URL: /user/123/orders/
 Method: Post
 Header: Loggedin-Platform-Header
 Request: None
+  
+The price in this will be the price paid by the customer to the school if they have come through the school otherwise it will be price they paid after applying all special offer and the coupon code to us without subtracting the wallet amount
+
 Response:
 {
   "meta": "",
@@ -915,31 +1032,31 @@ Response:
         "order_no": "1",
         "amount": 1444,
         "details": "jvckdjsjvaxncs x",
-        "date": "20/11/2017"
+        "purchase_date": "20/11/2017"
       },
       {
         "order_no": "1",
         "amount": 1444,
         "details": "jvckdjsjvaxncs x",
-        "date": "20/11/2017"
+        "purchase_date": "20/11/2017"
       },
       {
         "order_no": "1",
         "amount": 1444,
         "details": "jvckdjsjvaxncs x",
-        "date": "20/11/2017"
+        "purchase_date": "20/11/2017"
       },
       {
         "order_no": "1",
         "amount": 1444,
         "details": "jvckdjsjvaxncs x",
-        "date": "20/11/2017"
+        "purchase_date": "20/11/2017"
       },
       {
         "order_no": "1",
         "amount": 1444,
         "details": "jvckdjsjvaxncs x",
-        "date": "20/11/2017"
+        "purchase_date": "20/11/2017"
       }
     ]
   }
@@ -1227,6 +1344,26 @@ Response:
 }
 
  
+18
+API Name: Order Review API
+Status: Need to be discuss URL
+URL: /user/123/order/review/
+Method: POST
+Header: Loggedin-Platform-Header
+Request:
+{
+  "order_id": 12,
+  "Coupon_code": LOGIQ100,
+}
+Response:
+{
+  "meta": "",
+  "data": {
+    "valid_request": true or false,
+"valid_request" 
+
+  }
+}
 
 19
 API Name: Payment Details API
@@ -3018,8 +3155,3 @@ Response:
 
   }
 }
-
-
-
-
-
