@@ -192,6 +192,7 @@ Method: GET
 Header: Platform-Header
 Request: No Query Params
 Response:
+```
 {
   "meta": "",
   "data": {
@@ -302,7 +303,8 @@ Response:
   ]
   }
 }
- 
+```
+
 5.
 API Name: Captcha API
 Status: Need to be discuss the Usage and URL
@@ -311,6 +313,7 @@ Method: GET
 Header: Platform-Header
 Request: No Query Params
 Response:
+```
 {
   "meta": "",
   "data": {
@@ -318,7 +321,7 @@ Response:
     "correct_value": "IVijqer"
   }
 }
- 
+``` 
 
 
 
@@ -330,6 +333,7 @@ Method: GET
 Header: Platform-Header
 Request: No Query Params
 Response:
+```
 {
   "meta": "",
   "data": {
@@ -439,9 +443,10 @@ Response:
     }
   }
 }
-
+```
 
 Version 2 of this with feature redundancy
+```
 {
   "meta": "",
   "data": {
@@ -542,16 +547,17 @@ Version 2 of this with feature redundancy
     }
   }
 }
+```
 
- 
- 
-7.        API Name: City API
+7.        
+API Name: City API
 Status: Need to be discuss URL
 URL: /utility/test/city/
 Method: GET
 Header: Platform-Header
 Request: No Query Params
 Response:
+```
 {
   "meta": "",
   "data": [
@@ -587,14 +593,17 @@ Response:
   }
   ]
 }
+```
 
-8.        API Name: Class API
+8.        
+API Name: Class API
 Status: Need to be discuss URL
 URL: /user/class/
 Method: GET
 Header: Platform-Header
 Request: No Query Params
 Response:
+```
 {
   "meta": "",
   "data": [
@@ -650,7 +659,8 @@ Response:
   }
   ]
 }
-
+```
+9.
 API Name: Test Schedule API
 Status: Need to be discuss URL
 URL: /user/registration/
@@ -658,6 +668,7 @@ Method: GET
 Header: Platform-Header
 Request: queryparams = city_id
 Response:
+```
 {
   "meta": "",
   "data": {
@@ -680,7 +691,8 @@ Response:
   ]
   }
 }
- 
+```
+
 9.1
 API Name: Registration API
 Status: Need to be discuss URL
@@ -689,6 +701,7 @@ Method: GET
 Header: Platform-Header
 Request: queryparams = city_id
 Response:
+```
 {
   "meta": "",
   "data": {
@@ -711,7 +724,7 @@ Response:
   ]
   }
 }
- 
+``` 
 
 9.2
 API Name: Registration API
@@ -720,7 +733,7 @@ URL: /user/registration/
 Method: POST
 Header: Platform-Header
 Request:
- 
+``` 
 {
   "full_name": "Nimesh Kiran Verma",
   "mobile_number":"9911616971",
@@ -731,16 +744,18 @@ Request:
   "password":"password123"
   "refer_code":"Mikin7332"
 }
- 
+```
 Response:
- {
+```
+{
   "meta": "",
   "data": {
     "customer_id": 101,
     "session_id": "logikids_101_Ad10w9TSOLRlH0tI6clnA8KXchFXd3kl"
   }
 }
- 
+```
+
 10.
 API Name: Test Leads API
 Status: Need to be discuss URL
@@ -748,7 +763,7 @@ URL: /user/lead/
 Method: POST
 Header: Platform-Header
 Request:
- 
+``` 
 {
   "full_name": "Nimesh Kiran Verma",
   "mobile_number":"9911616971",
@@ -757,8 +772,9 @@ Request:
   "class_id":1,
   "school":"St Xaviers Sr Sec School",
 }
- 
+``` 
 Response:
+```
 {
   "meta": "",
   "data": {
@@ -766,7 +782,8 @@ Response:
     "message":"Thanks for trying Us"
   
 }
- 
+```
+
 11.
 API Name: Login API
 Status: Need to be discuss URL
@@ -774,14 +791,16 @@ URL: /user/login/
 Method: POST
 Header: Platform-Header
 Request:
+```
 {
   "email":"nimesh.aug11@gmail.com",
   "password":"password123"
 }
- 
+``` 
 Response:
 
 Should we make 2 cases for this api, one with the error and the other without it  
+```
 {
   "meta": "",
   "data": {
@@ -793,7 +812,8 @@ Should we make 2 cases for this api, one with the error and the other without it
     "session_id": "logikids_101_Ad10w9TSOLRlH0tI6clnA8KXchFXd3kl"
   }
 }
- 
+```
+
 12.
 API Name: Forgot Password API
 Status: Need to be discuss URL
@@ -801,18 +821,21 @@ URL: /user/forgot_password/
 Method: POST
 Header: Platform-Header
 Request:
+```
 {
   "email":"nimesh.aug11@gmail.com",
 }
- 
+``` 
 Response:
+```
 {
   "meta": "",
   "data": {
   "message ":"Password Reset Link has been sent to your registered Email"
   }
 }
- 
+```
+
 13.1
 API Name: Reset Password API
 Status: Need to be discuss URL
@@ -820,19 +843,17 @@ URL: /user/forgot_password/
 Method: GET
 Header: Platform-Header
 Request: Query Params
-id=4675&code=uAm-wlA6HKsuZsZYREZlgfkJzhR7ikG3
- 
- 
- 
- 
+id=4675&code=uAm-wlA6HKsuZsZYREZlgfkJzhR7ikG3 
 Response:
+```
 {
   "meta": "",
   "data": {
   "email ":"nimesh.aug11@gmail.com"
   }
 }
- 
+```
+
 13.2
 API Name: Reset Password API
 Status: Need to be discuss URL
@@ -840,53 +861,23 @@ URL: /user/forgot_password/
 Method: POST
 Header: Platform-Header
 Request:
+```
 {
   "id": "4675",
   "code": "uAm-wlA6HKsuZsZYREZlgfkJzhR7ikG3",
   "email ":nimesh.aug11@gmail.com,
   "password":"new_password"
 }
- 
- 
- 
- 
+``` 
 Response:
+```
 {
   "meta": "",
   "data": {
   "email ":"nimesh.aug11@gmail.com"
   }
 }
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+``` 
 
 Loggedin APIs
 
@@ -898,6 +889,7 @@ Method: POST
 Header: Loggedin-Platform-Header
 Why are we returning the same thing
 Request:
+```
 {
   "customer_id": 123,
   "full_name": "Nimesh Kiran Verma",
@@ -908,7 +900,9 @@ Request:
   "school": "St Xaviers Sr Sec School",
   "profile_pic": "https://9gag.com/gag/a5nEdzg"
 }
+```
 Response:
+```
 {
   "meta": "",
   "data": {
@@ -922,6 +916,7 @@ Response:
     "profile_pic": "https://9gag.com/gag/a5nEdzg"
   }
 }
+```
 
 14.2
 API Name: Profile API
@@ -931,6 +926,7 @@ Method: GET
 Header: Loggedin-Platform-Header
 Request: Query Params None
 Response:
+```
 {
   "meta": "",
   "data": {
@@ -968,7 +964,7 @@ Response:
     }
   }
 }
-
+```
 
 14.3
 API Name: Profile API
@@ -977,6 +973,7 @@ URL: /user/123/profile/
 Method: PUT
 Header: Loggedin-Platform-Header
 Request:
+```
 {
   "full_name": "Nimesh Kiran Verma",
   "mobile_number": "9911616971",
@@ -986,7 +983,9 @@ Request:
   "school": "St Xaviers Sr Sec School",
   "profile_pic": "https://9gag.com/gag/a5nEdzg"
 }
+```
 Response:
+```
 {
   "meta": "",
   "data": {
@@ -1000,6 +999,8 @@ Response:
     "profile_pic": "https://9gag.com/gag/a5nEdzg"
   }
 }
+```
+
 15
 API Name: Change Password API
 Status: Need to be discuss URL
@@ -1007,16 +1008,21 @@ URL: /user/123/password/
 Method: Post
 Header: Loggedin-Platform-Header
 Request: 
+```
 {
     "customer_id": 123,
     "old_password": "pass123",
     "new_password": "newpass123"
-  }
+}
+```
 Response:
+```
 {
   "meta": "",
   "data": {}
 }
+```
+
 16
 API Name: Order API
 Status: Need to be discuss URL
@@ -1028,6 +1034,7 @@ Request: None
 The price in this will be the price paid by the customer to the school if they have come through the school otherwise it will be price they paid after applying all special offer and the coupon code to us without subtracting the wallet amount
 
 Response:
+```
 {
   "meta": "",
   "data": {
@@ -1065,6 +1072,7 @@ Response:
     ]
   }
 }
+```
 
 15.1
 API Name: Refer API
@@ -1074,6 +1082,7 @@ Method: GET
 Header: Loggedin-Platform-Header
 Request: Query Params None
 Response:
+```
 {
   "meta": "",
   "data": {
@@ -1087,7 +1096,7 @@ Response:
     }
   }
 }
-
+```
 
 Note : Take a Tour Via JSON
 
@@ -1099,6 +1108,7 @@ Method: GET
 Header: Loggedin-Platform-Header
 Request: Query Params None
 Response:
+```
 {
   "meta": "",
   "data": {
@@ -1107,13 +1117,7 @@ Response:
     "email": "nimesh.aug11@gmail.com"
   }
 }
-
-
-
-
-
-
-
+```
 
 16.2
 API Name: Ask A Query API
@@ -1122,6 +1126,7 @@ URL: /user/123/refer/
 Method: GET
 Header: Loggedin-Platform-Header
 Request: 
+```
 {
   "meta": "",
   "data": {
@@ -1134,15 +1139,16 @@ Request:
 
   }
 }
-
+```
 Response:
+```
 {
   "meta": "",
   "data": {
     "message": "We will get back to you."
   }
 }
-
+```
 
 16.2
 API Name: User Product APIs
@@ -1153,6 +1159,7 @@ Header: Loggedin-Platform-Header
 Request: 
 
 Response:
+```
 {
   "meta": "",
   "data": {
@@ -1187,7 +1194,7 @@ Response:
     }
   }
 }
-
+```
 
 17.
 API Name: Mega Menu
@@ -1197,6 +1204,7 @@ Method: GET
 Header: Loggedin-Platform-Header
 Request:
 Response:
+```
 {
   "meta": "",
   "data": [
@@ -1245,9 +1253,7 @@ Response:
       }
     ]
 }
-
-
- 
+```
 
 17
 API Name: Test subscription
@@ -1257,6 +1263,7 @@ Method: GET
 Header: Platform-Header
 Request:
 Response:
+```
 {
   "meta": "",
   "data": {
@@ -1305,7 +1312,8 @@ Response:
   ]
   }
 }
- 
+```
+
 18
 API Name: Order Review API
 Status: Need to be discuss URL
@@ -1313,6 +1321,7 @@ URL: /user/123/order/review/
 Method: POST
 Header: Loggedin-Platform-Header
 Request:
+```
 {
   "package_ids": [
   23,
@@ -1321,7 +1330,9 @@ Request:
   "test": true,
   "content": true
 }
+```
 Response:
+```
 {
   "meta": "",
   "data": {
@@ -1346,7 +1357,7 @@ Response:
     ]
   }
 }
-
+```
  
 18
 API Name: Order Review API
@@ -1355,11 +1366,14 @@ URL: /user/123/order/review/
 Method: POST
 Header: Loggedin-Platform-Header
 Request:
+```
 {
   "order_id": 12,
   "Coupon_code": LOGIQ100,
 }
+```
 Response:
+```
 {
   "meta": "",
   "data": {
@@ -1368,6 +1382,7 @@ Response:
 
   }
 }
+```
 
 19
 API Name: Payment Details API
@@ -1376,11 +1391,14 @@ URL: /user/123/payment_details/
 Method: POST
 Header: Loggedin-Platform-Header
 Request:
+```
 {
   "order_id": 123
   "state_id": 1
 }
+```
 Response:
+```
 {
   "meta": "",
   "data": {
@@ -1388,6 +1406,7 @@ Response:
     "amount": 1212
   }
 }
+```
 
 20
 API Name: Weekly leaderboard API
@@ -1397,7 +1416,8 @@ Method: GET
 Header: Loggedin-Platform-Header
 Request:None
 Response:
- {
+```
+{
   "meta": "",
   "data": {
     "students":[
@@ -1439,6 +1459,7 @@ Response:
     ]
   }
 }
+```
 
 21
 API Name: Topic Notes API
@@ -1448,6 +1469,7 @@ Method: POST
 Header: Loggedin-Platform-Header
 Request: None
 Response:
+```
 {
   "meta": "",
   "data": {
@@ -1480,6 +1502,8 @@ Response:
     ]
   }
 }
+```
+
 22
 API Name: Current Test Schedule API
 Status: Need to be discuss URL
@@ -1488,6 +1512,7 @@ Method: POST
 Header: Loggedin-Platform-Header
 Request: None
 Response:
+```
 {
   "meta": "",
   "data": {
@@ -1507,6 +1532,8 @@ Response:
     ]
   }
 }
+```
+
 23
 API Name: Sample Paper Status API
 Status: Need to be discuss URL
@@ -1515,6 +1542,7 @@ Method: POST
 Header: Loggedin-Platform-Header
 Request: None
 Response:
+```
 {
   "meta": "",
   "data": {
@@ -1550,7 +1578,7 @@ Response:
     ]
   }
 }
-
+```
 
 pic_a
 
@@ -1563,7 +1591,7 @@ pic_c
 
 pic_d
 
-24
+24.
 API Name: Sample Paper Download API
 Status: Need to be discuss URL
 URL: /test/sample_paper/<sample_paper_id>/
@@ -1571,14 +1599,16 @@ Method: POST
 Header: Loggedin-Platform-Header
 Request: None
 Response:
+```
 {
   "meta": "",
   "data": {
 // Multipart form
 }
 }
+```
 
-25
+25.
 API Name: Sample Paper Solutions Download API
 Status: Need to be discuss URL
 URL: /test/sample_paper/<sample_paper_id>/solutions/
@@ -1586,12 +1616,14 @@ Method: POST
 Header: Loggedin-Platform-Header
 Request: None
 Response:
+```
 {
   "meta": "",
   "data": {
 // Multipart form
 }
 }
+```
 
 26
 API Name: Sample Paper Answers Submit API
@@ -1600,6 +1632,7 @@ URL: /test/sample_paper/<sample_paper_id>/answers/
 Method: POST
 Header: Loggedin-Platform-Header
 Request: 
+```
 {
   "answers": [
     {
@@ -1634,12 +1667,15 @@ Request:
     }
   ]
 }
+```
 
 Response:
+```
 {
   "meta": "",
   "data": {}
 }
+```
 
 25.2
 API Name: Sample Paper Answers Submit API
@@ -1649,6 +1685,7 @@ Method: GET
 Header: Loggedin-Platform-Header
 Request: None
 Response:
+```
 {
   "meta": "",
   "data": {
@@ -1674,6 +1711,8 @@ Response:
     }
   }
 }
+```
+
 27
 API Name: Sample Paper Attempt complete API
 Status: Need to be discuss URL
@@ -1682,11 +1721,13 @@ Method: POST
 Header: Loggedin-Platform-Header
 Request: None
 Response:
+```
 {
   "meta": "",
   "data": {
 }
 }
+```
 
 28.1
 API Name: Sample Paper Question API
@@ -1696,6 +1737,7 @@ Method: GET
 Header: Loggedin-Platform-Header
 Request: None
 Response:
+```
 {
   "meta": "",
   "data": {
@@ -1728,6 +1770,7 @@ Response:
     ]
   }
 }
+```
 
 29
 API Name: Sample Paper Question Answer API
@@ -1735,15 +1778,19 @@ Status: Need to be discuss URL
 URL: /test/sample_paper/<sample_paper_id>/question/<question_id>/answer
 Method: POST
 Header: Loggedin-Platform-Header
-Request: {
+Request: 
+```
+{
   "answer_id":"a"
 }
+```
 Response:
+```
 {
   "meta": "",
   "data": {}
 }
-
+```
 30
 API Name: Sample Paper Analysis API
 Status: Need to be discuss URL
@@ -1752,6 +1799,7 @@ Method: POST
 Header: Loggedin-Platform-Header
 Request: None
 Response:
+```
 {
   "meta": "",
   "data": {
@@ -1905,7 +1953,7 @@ Response:
 
   }
 }
-
+```
 
 
 31
