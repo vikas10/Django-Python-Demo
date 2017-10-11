@@ -1,7 +1,33 @@
 # API Documentation
+
+#### TODO:
+    1. Make the structure for Static text JSON, which includes:
+        - homepage_div
+        - class_div
+        - contact_div
+        Eg:
+```
+        {
+            "homepage":{
+                "prominent_message": "Your kids personal brain trainer"
+            }
+            "contact_div":{
+                "contact_info":{
+                    "title_message": "Contact-Info",
+                    "adress": "CampusConnect Technologies Private limited, 105 A Wing 1st floor, Kanara Business Center, Sawali Society, Laxmi Nagar, Ghatkopar East, Mumbai –400075",
+                    "phone"
+                }
+                "query_box":{
+                    
+                }
+            }    
+            
+        }
+```
 #### Aim:
     This document aims to provide a general understanding of the backend APIs and its details.
 #### Definitions:
+ - Generic Status: 200, 404, 500, 403
  - LoggedIn-Header:
     A header is defined as LoggedIn-Header when the header has the session token in it. This type of header is used for the user who is the registered and has logged into the system.
     LoggedIn-Header JSON:
@@ -28,7 +54,7 @@ Platform-Header JSON:
 ```
 
 source can take any of the following values:
--    web: When the API is called from Desktop browser
+-   web: When the API is called from Desktop browser
 -   mweb: When the API is called from Mobile browser
 -   android: When the API is called from Android App
 -   ios: When the API is called from IOS App
@@ -70,24 +96,25 @@ Method: GET
 Header: Platform-Header
 Request: No Query Params
 Response:
+```
 {
   "meta": "",
   "data": [
     {
-      "source_url": "https://www.fb.com/comment/123",
+      "review_url": "https://www.fb.com/comment/123",
       "image_url": "https://www.facebook.com/img/123",
   "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo tempor incididunt utnsequat",
       "reviewer": "Rita Singh"
     },
     {
-  "source_url": "https://www.fb.com/comment/123",        
+  "review_url": "https://www.fb.com/comment/123",        
   "image_url": "https://www.facebook.com/img/123",
       "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo tempor incididunt utnsequat",
       "reviewer": "Rita Singh"
     }
   ]
 }
- 
+```
  
 2.
 API Name: School Partnership API
@@ -97,6 +124,7 @@ Method: GET
 Header: Platform-Header
 Request: No Query Params
 Response:
+```
 {
   "meta": "",
   "data": [
@@ -127,50 +155,16 @@ Response:
   }
   ]
 }
- 
-3.1
-Deleted the old design for the contact us api
-API Name: Contact Us API 
-Status: Need to be discuss the URL
-URL: /company/contact/
-Method: GET
-Header: Platform-Header
-Request: No Query Params
-Response:
-{
-  "meta": "",
-  "data": {
-  "contact_info": {
-    "name": "Contact Info",
-    "address": [
-      "Campus Connect Technologies Private limited 105 A Wing 1st floor, Kanara Business Center, Sawali Society, Laxmi Nagar Ghatkopar East, Mumbai – 400075"
-    ],
-  "city": "Mumbai", 
-"email": [
-        "support@logiqids.com"
-    ],
-    "phone": [
-      "+ 91 7045345345",
-      "+ 91 8080809604"
-    ]
-  },
-  "contact_form": {
-    "name": "Get in touch with us",
-    "message": [
-      "Have a query? Reach out to us and we'll respond within 48 working hours. Customer feedback is very valuable to us.",
-      "We encourage you to share your suggestions and promise to do our best to maximize your experience with us."
-    ]
-  }
-  }
-}
- 
-3.2
+```
+
+3
 API Name: Contact Us Post API
 Status: Need to be discuss the URL
 URL: /company/contact/
 Method: POST
 Header: Platform-Header
 Request:
+```
 {
     "name" : "Nimesh Verma",
     "email" : "nimesh.aug11@gmail.com",
@@ -179,14 +173,17 @@ Request:
     "captcha_valid" : true,
   }
 }
+```
 Response:
+```
 {
     "meta" : "",
     "data" : {
         "message":"Your query has been submitted, We will get back to you ASAP"
   }
 }
- 
+```
+
 4.
 API Name: FAQ API
 Status: Need to be discuss the URL
