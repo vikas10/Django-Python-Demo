@@ -11,50 +11,57 @@
 }
 ``` 
 The session_token value follows the given pattern:
+```
 logiqid_<customer_id>_<uuid>
- 
+```
+
 uuid = 32 Character unique text used for user identification
  
 Platform-Header:
-                      A header is defined as Platform-Header when the header has the information about the platform which is calling the API. This type of header is used for the cases when the same API needs to served differently for different Platforms.
+A header is defined as Platform-Header when the header has the information about the platform which is calling the API. This type of header is used for the cases when the same API needs to served differently for different Platforms.
  
 Platform-Header JSON:
+```
 {
 "source":"desktop_browser"
 }
- 
+```
+
 source can take any of the following values:
 -    web: When the API is called from Desktop browser
 -   mweb: When the API is called from Mobile browser
 -   android: When the API is called from Android App
 -   ios: When the API is called from IOS App
  
-
-
 Versioning:
-                      We will be utilising the URL based Versioning i.e we will use the version number in the URL.
+We will be utilising the URL based Versioning i.e we will use the version number in the URL.
  
 In our system we will be having either:
 
- Loggedin-Platform-Header = Loggedin-Header + Platform-Header
+Loggedin-Platform-Header = Loggedin-Header + Platform-Header
+```
 {
 "session_token":"logiqid_34_mYrmAIJA6TUDqfOvpfqez7fM9Mp11n2b",
 "source":"desktop_browser"
 }
- 
- Platform-Header
+```
+
+Platform-Header
+```
 {
 "source":"desktop_browser"
 }
-  
+```
+
 Meta-Data-Response:
-                      A response is called Meta-Data-Response when it satisfies the following JSON schema
+A response is called Meta-Data-Response when it satisfies the following JSON schema
+```
 {
 "meta" : "This is used to provide any meta information about the API, mostly not used by clients (browsers/apps)",
-"data" : {"data_key":"data value"
+"data" : { "data_key":"data value" }
 }
-}
- 
+```
+
  ### Documentation
 1.
 API Name: Reviews API
