@@ -384,7 +384,6 @@ Response:
   ]
 }
 ```
-
 8.        
 API Name: Class API
 Status: Need to be discuss URL
