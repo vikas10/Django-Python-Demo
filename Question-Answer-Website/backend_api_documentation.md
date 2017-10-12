@@ -1,57 +1,65 @@
 # API Documentation
 
 #### TODO:
-    1. Make the structure for Static text JSON, which includes:
-        - homepage_div
-        - class_div
-        - contact_div
-        - city_id list
-        
-        Eg:
-```
-        {
-            "homepage":{
-                "prominent_message": "Your kids personal brain trainer"
-            }
-            "contact_div":{
-                "contact_info":{
-                    "title_message": "Contact-Info",
-                    "adress": "CampusConnect Technologies Private limited, 105 A Wing 1st floor, Kanara Business Center, Sawali Society, Laxmi Nagar, Ghatkopar East, Mumbai –400075",
-                    "phone"
-                }
-                "query_box":{
-                    
-                }
-            }    
+
+1. Make the structure for Static text JSON, which includes:
+	- homepage_div
+	- class_div
+	- contact_div
+	- city_id list
+
+Eg:
+
+```javascript
+{
+    "homepage":{
+        "prominent_message": "Your kids personal brain trainer"
+    }
+    "contact_div":{
+        "contact_info":{
+            "title_message": "Contact-Info",
+            "adress": "CampusConnect Technologies Private limited, 105 A Wing 1st floor, Kanara Business Center, Sawali Society, Laxmi Nagar, Ghatkopar East, Mumbai –400075",
+            "phone"
+        }
+        "query_box":{
             
         }
+    }                
+}
 ```
-#### Aim:
-    This document aims to provide a general understanding of the backend APIs and its details.
-#### Definitions:
- - Generic Status: 200, 404, 500, 403
- - LoggedIn-Header:
-    A header is defined as LoggedIn-Header when the header has the session token in it. This type of header is used for the user who is the registered and has logged into the system.
-    LoggedIn-Header JSON:
+
+### Aim:
+This document aims to provide a general understanding of the backend APIs and its details.
+
+### Definitions:
+
+#### Generic Status: 200, 404, 500, 403
+
+#### LoggedIn-Header:
+
+A header is defined as LoggedIn-Header when the header has the session token in it. This type of header is used for the user who is the registered user and has logged into the system.
+
+LoggedIn-Header JSON:
 ```
 {
-"session_token":"logiqid_34_mYrmAIJA6TUDqfOvpfqez7fM9Mp11n2b"
+	"session_token":"logiqid_34_mYrmAIJA6TUDqfOvpfqez7fM9Mp11n2b"
 }
 ``` 
+
 The session_token value follows the given pattern:
 ```
 logiqid_<customer_id>_<uuid>
 ```
+where **uuid** is a 32 Character unique text used for user identification
 
-uuid = 32 Character unique text used for user identification
- 
-Platform-Header:
+#### Platform-Header:
+
 A header is defined as Platform-Header when the header has the information about the platform which is calling the API. This type of header is used for the cases when the same API needs to served differently for different Platforms.
  
 Platform-Header JSON:
 ```
 {
-"source":"desktop_browser"
+	"source":"desktop_browser"
 }
 ```
 
@@ -60,10 +68,7 @@ source can take any of the following values:
 -   mweb: When the API is called from Mobile browser
 -   android: When the API is called from Android App
 -   ios: When the API is called from IOS App
- 
-Versioning:
-We will be utilising the URL based Versioning i.e we will use the version number in the URL.
- 
+  
 In our system we will be having either:
 
 Loggedin-Platform-Header = Loggedin-Header + Platform-Header
@@ -81,7 +86,10 @@ Platform-Header
 }
 ```
 
-Meta-Data-Response:
+#### Versioning:
+We will be utilising the URL based Versioning i.e we will use the version number in the URL.
+
+#### Meta-Data-Response:
 A response is called Meta-Data-Response when it satisfies the following JSON schema
 ```
 {
@@ -90,8 +98,11 @@ A response is called Meta-Data-Response when it satisfies the following JSON sch
 }
 ```
 
- ### Documentation
-1.
+### Documentation
+
+#### PreLogin APIs
+
+1.	
 API Name: Reviews API
 URL: /products/review/
 Method: GET
@@ -100,21 +111,21 @@ Request: No Query Params
 Response:
 ```
 {
-  "meta": "",
-  "data": [
-    {
-      "review_url": "https://www.fb.com/comment/123",
-      "image_url": "https://www.facebook.com/img/123",
-  "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo tempor incididunt utnsequat",
-      "reviewer": "Rita Singh"
-    },
-    {
-  "review_url": "https://www.fb.com/comment/123",        
-  "image_url": "https://www.facebook.com/img/123",
-      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo tempor incididunt utnsequat",
-      "reviewer": "Rita Singh"
-    }
-  ]
+    "meta":"",
+    "data":[
+        {
+            "review_url":"https://www.fb.com/comment/123",
+            "image_url":"https://www.facebook.com/img/123",
+            "review":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo tempor incididunt utnsequat",
+            "reviewer":"Rita Singh"
+        },
+        {
+            "review_url":"https://www.fb.com/comment/123",
+            "image_url":"https://www.facebook.com/img/123",
+            "review":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo tempor incididunt utnsequat",
+            "reviewer":"Rita Singh"
+        }
+    ]
 }
 ```
  
@@ -159,8 +170,8 @@ Response:
 }
 ```
 
-3
-API Name: Contact Us Post API
+3.
+API Name: Contact Us Post AP
 Status: Need to be discuss the URL
 URL: /company/contact/
 Method: POST
@@ -187,7 +198,7 @@ Response:
 }
 ```
 
-5.
+4.
 API Name: Captcha API
 Status: Need to be discuss the Usage and URL
 URL: /utility/captcha/
@@ -205,7 +216,7 @@ Response:
 }
 ``` 
 
-6.
+5.
 API Name: Pricing API
 Status: Need to be discuss the Usage and URL
 URL: /product/pricing/
@@ -339,7 +350,7 @@ Response:
 }
 ```
 
-7.        
+6.        
 API Name: City API
 Status: Need to be discuss URL
 URL: /utility/test/city/
@@ -384,7 +395,7 @@ Response:
   ]
 }
 ```
-8.        
+7.        
 API Name: Class API
 Status: Need to be discuss URL
 URL: /user/class/
@@ -449,7 +460,7 @@ Response:
   ]
 }
 ```
-9.
+8.
 API Name: Test Schedule API
 Status: Need to be discuss URL
 URL: /user/registration/
@@ -482,7 +493,7 @@ Response:
 }
 ```
 
-9
+9.
 API Name: Registration API
 Status: Need to be discuss URL
 URL: /user/registration/
@@ -521,6 +532,7 @@ Make error response and status
   }
 }
 ```
+
 10.
 API Name: Test Leads API
 Status: Need to be discuss URL
@@ -668,9 +680,57 @@ Response:
 }
 ``` 
 
-Loggedin APIs
+#### Loggedin APIs
 
 14.1
+API Name: Profile API
+Status: Need to be discuss URL
+URL: /user/123/profile/
+Method: GET
+Header: Loggedin-Platform-Header
+Request: Query Params None
+Response:
+```
+{
+  "meta": "",
+  "data": {
+    "customer_id": {
+      "value": 123,
+      "is_editable": false
+    },
+    "full_name": {
+      "value": "Nimesh Kiran Verma",
+      "is_editable": true
+    },
+    "mobile_number": {
+      "value": "9911616971",
+      "is_editable": true
+    },
+    "email": {
+      "value": "nimesh.aug11@gmail.com",
+      "is_editable": true
+    },
+    "city_id": {
+      "value": 1,
+      "is_editable": true
+    },
+    "class_id": {
+      "value": 1,
+      "is_editable": false
+    },
+    "school": {
+      "value": "St Xaviers Sr Sec School",
+      "is_editable": true
+    },
+    "profile_pic": {
+      "value": "https://9gag.com/gag/a5nEdzg",
+      "is_editable": true
+    }
+  }
+}
+```
+
+14.2
 API Name: Profile API
 Status: Need to be discuss URL
 URL: /user/profile/
@@ -731,94 +791,11 @@ Response:
 }
 ```
 
-14.2
-API Name: Profile API
-Status: Need to be discuss URL
-URL: /user/123/profile/
-Method: GET
-Header: Loggedin-Platform-Header
-Request: Query Params None
-Response:
-```
-{
-  "meta": "",
-  "data": {
-    "customer_id": {
-      "value": 123,
-      "is_editable": false
-    },
-    "full_name": {
-      "value": "Nimesh Kiran Verma",
-      "is_editable": true
-    },
-    "mobile_number": {
-      "value": "9911616971",
-      "is_editable": true
-    },
-    "email": {
-      "value": "nimesh.aug11@gmail.com",
-      "is_editable": true
-    },
-    "city_id": {
-      "value": 1,
-      "is_editable": true
-    },
-    "class_id": {
-      "value": 1,
-      "is_editable": false
-    },
-    "school": {
-      "value": "St Xaviers Sr Sec School",
-      "is_editable": true
-    },
-    "profile_pic": {
-      "value": "https://9gag.com/gag/a5nEdzg",
-      "is_editable": true
-    }
-  }
-}
-```
-Put can be removed
-14.3
-API Name: Profile API
-Status: Need to be discuss URL
-URL: /user/123/profile/
-Method: PUT
-Header: Loggedin-Platform-Header
-Request:
-```
-{
-  "full_name": "Nimesh Kiran Verma",
-  "mobile_number": "9911616971",
-  "email": "nimesh.aug11@gmail.com",
-  "city_id": 1,
-  "class_id": 1,
-  "school": "St Xaviers Sr Sec School",
-  "profile_pic": "https://9gag.com/gag/a5nEdzg"
-}
-```
-Response:
-```
-{
-  "meta": "",
-  "data": {
-    "customer_id": 123,
-    "full_name": "Nimesh Kiran Verma",
-    "mobile_number": "9911616971",
-    "email": "nimesh.aug11@gmail.com",
-    "city_id": 1,
-    "class_id": 1,
-    "school": "St Xaviers Sr Sec School",
-    "profile_pic": "https://9gag.com/gag/a5nEdzg"
-  }
-}
-```
-
-15
+15.
 API Name: Change Password API
 Status: Need to be discuss URL
 URL: /user/123/password/
-Method: Post
+Method: POST
 Header: Loggedin-Platform-Header
 Request: 
 ```
@@ -836,16 +813,14 @@ Response:
 }
 ```
 
-16
+16.
 API Name: Order API
 Status: Need to be discuss URL
 URL: /user/123/orders/
-Method: Post
+Method: POST
 Header: Loggedin-Platform-Header
 Request: None
-  
-The price in this will be the price paid by the customer to the school if they have come through the school otherwise it will be price they paid after applying all special offer and the coupon code to us without subtracting the wallet amount
-
+Remark: If the customer has enrolled through the school the **amount** will be the price paid to the school otherwise it will be price they paid after applying both special offer and the coupon code to us without subtracting the wallet amount
 Response:
 ```
 {
@@ -887,7 +862,7 @@ Response:
 }
 ```
 
-15.1
+17.
 API Name: Refer API
 Status: Need to be discuss URL
 URL: /user/123/refer/
@@ -920,20 +895,13 @@ Response:
 }
 ```
 
-Note : Take a Tour Via JSON
-
-
-API Name: Ask A Query API
-Same as contact us api
-
-16.2
+18.
 API Name: User Product APIs
 Status: Need to be discuss URL
 URL: /user/123/products/
 Method: GET
 Header: Loggedin-Platform-Header
 Request: 
-
 Response:
 ```
 {
@@ -972,7 +940,7 @@ Response:
 }
 ```
 
-17.
+19.
 API Name: Mega Menu
 Status: Need to be discuss URL
 URL: /user/id/menu
@@ -1031,7 +999,7 @@ Response:
 }
 ```
 
-17
+20.
 API Name: Test subscription
 Status: Need to be discuss URL
 URL: /product/test/
@@ -1090,7 +1058,7 @@ Response:
 }
 ```
 
-18
+21.
 API Name: Order Review API
 Status: Need to be discuss URL
 URL: /user/123/order/review/
