@@ -10,7 +10,7 @@
 
 Eg:
 
-```javascript
+```
 {
     "homepage":{
         "prominent_message": "Your kids personal brain trainer"
@@ -216,14 +216,15 @@ A response is called Meta-Data-Response when it satisfies the following JSON sch
 }
 ``` 
 
-5.
-	- API Name: Pricing API
+5.	- API Name: Pricing API
 	- Status: Need to be discuss the Usage and URL
 	- URL: /product/pricing/
 	- Method: GET
 	- Header: Platform-Header
 	- Request: No Query Params
-	- Response:
+	- Remark: The content package data and the test package data can take every combination in the content + test case so we shouldn't send the package data again in the content + test case. The discount on the content + test case can be passed in the content + test column as a percentage amount and the front end can contain the logic to round of the figure so that the customer doesn't see prices in floating points.
+	- Response: 
+
 ```
 {
 	"meta": "",
@@ -347,40 +348,11 @@ A response is called Meta-Data-Response when it satisfies the following JSON sch
 				"image_url": "https://www.facebook.com/img/123",
 				"name": "Content and Test",
 				"description": "ddwwdwdsa edewsds ",
-				"price": [{
-						"period": "3 months",
-						"price": 900,
-						"offer_price": 800,
+				"discount": { 
+						"percentage": 10,
 						"validity_date": "21/7/2017",
 						"text": "10% Off",
-						"package_id": [
-							12,
-							13
-						]
-					},
-					{
-						"period": "6 months",
-						"price": 1400,
-						"offer_price": 800,
-						"validity_date": "21/7/2017",
-						"text": "10% Off",
-						"package_id": [
-							12,
-							13
-						]
-					},
-					{
-						"period": "9 months",
-						"price": 1800,
-						"offer_price": 800,
-						"validity_date": "21/7/2017",
-						"text": "10% Off",
-						"package_id": [
-							12,
-							13
-						]
-					}
-				],
+				},
 				"button_tex": "Buy Now",
 				"features": [{
 					"image_url": "https://www.facebook.com/img/123",
