@@ -103,12 +103,12 @@ A response is called Meta-Data-Response when it satisfies the following JSON sch
 #### PreLogin APIs
 
 1.	
-API Name: Reviews API
-URL: /products/review/
-Method: GET
-Header: Platform-Header
-Request: No Query Params
-Response:
+	- API Name: Reviews API
+	- URL: /products/review/
+	- Method: GET
+	- Header: Platform-Header
+	- Request: No Query Params
+	- Response:
 ```
 {
     "meta":"",
@@ -130,13 +130,13 @@ Response:
 ```
  
 2.
-API Name: School Partnership API
-Status: Might not be required, need to be discussed
-URL: /products/school_partnership/
-Method: GET
-Header: Platform-Header
-Request: No Query Params
-Response:
+	- API Name: School Partnership API
+	- Status: Might not be required, need to be discussed
+	- URL: /products/school_partnership/
+	- Method: GET
+	- Header: Platform-Header
+	- Request: No Query Params
+	- Response:
 ```
 {
   "meta": "",
@@ -171,12 +171,12 @@ Response:
 ```
 
 3.
-API Name: Contact Us Post AP
-Status: Need to be discuss the URL
-URL: /company/contact/
-Method: POST
-Header: Platform-Header
-Request:
+	- API Name: Contact Us Post API
+	- Status: Need to be discuss the URL
+	- URL: /company/contact/
+	- Method: POST
+	- Header: Platform-Header
+	- Request:
 ```
 {
     "name" : "Nimesh Verma",
@@ -188,7 +188,7 @@ Request:
   }
 }
 ```
-Response:
+	- Response:
 ```
 {
     "meta" : "",
@@ -199,13 +199,13 @@ Response:
 ```
 
 4.
-API Name: Captcha API
-Status: Need to be discuss the Usage and URL
-URL: /utility/captcha/
-Method: GET
-Header: Platform-Header
-Request: No Query Params
-Response:
+	- API Name: Captcha API
+	- Status: Need to be discuss the Usage and URL
+	- URL: /utility/captcha/
+	- Method: GET
+	- Header: Platform-Header
+	- Request: No Query Params
+	- Response:
 ```
 {
   "meta": "",
@@ -217,147 +217,190 @@ Response:
 ``` 
 
 5.
-API Name: Pricing API
-Status: Need to be discuss the Usage and URL
-URL: /product/pricing/
-Method: GET
-Header: Platform-Header
-Request: No Query Params
-Response:
+	- API Name: Pricing API
+	- Status: Need to be discuss the Usage and URL
+	- URL: /product/pricing/
+	- Method: GET
+	- Header: Platform-Header
+	- Request: No Query Params
+	- Response:
 ```
 {
-  "meta": "",
-  "data": {
-    "message": {
-      "heading": "Simple & transparent pricing",
-      "bottom": "15-Days, No Questions Asked, Full Money-Back uarantee. (Valid only for he Content Subscription)"
-    },
-    "pricing": {
-      "test": {
-        "image_url": "https://www.facebook.com/img/123",
-        "name": "Test",
-        "description": "Includes 4 sample papers and 5 Topic Notes",
-        "price": 550,
-        "offer": {
-          "price": 450,
-          "validity_date": "21/7/2017",
-          "text": "Early bird discount till"
-        },
-        "button_tex": "Buy Now",
-        "features": [
-          {
-            "image_url": "https://www.facebook.com/img/123",
-            "status": true,
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
-          },
-          {
-            "image_url": "https://www.facebook.com/img/123",
-            "status": true,
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
-          },
-          {
-            "image_url": "https://www.facebook.com/img/123",
-            "status": true,
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
-          },
-          {
-            "image_url": "https://www.facebook.com/img/123",
-            "status": true,
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
-          }
-        ]
-      },
-      "content": {
-        "image_url": "https://www.facebook.com/img/123",
-        "name": "Content",
-        "description": "dcdsc svfv",
-        "price": [
-          {
-            "period": "3 months",
-            "price": 900
-          },
-          {
-            "period": "6 months",
-            "price": 1400
-          },
-          {
-            "period": "1 year",
-            "price": 2200
-          }
-        ],
-        "button_tex": "Buy Now",
-        "features": [
-          {
-            "image_url": "https://www.facebook.com/img/123",
-            "status": true,
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
-          },
-          {
-            "image_url": "https://www.facebook.com/img/123",
-            "status": true,
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
-          },
-          {
-            "image_url": "https://www.facebook.com/img/123",
-            "status": true,
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
-          },
-          {
-            "image_url": "https://www.facebook.com/img/123",
-            "status": true,
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
-          }
-        ]
-      },
-      "test_and_content": {
-        "image_url": "https://www.facebook.com/img/123",
-        "name": "Content and Test",
-        "description": "ddwwdwdsa edewsds ",
-        "price": [
-          {
-            "period": "3 months",
-            "price": 900,
-            "offer_price": 800,
-            "validity_date": "21/7/2017",
-            "text": "10% Off"
-          },
-          {
-            "period": "6 months",
-            "price": 1400,
-            "offer_price": 800,
-            "validity_date": "21/7/2017",
-            "text": "10% Off"
-          },
-          {
-            "period": "9 months",
-            "price": 1800,
-            "offer_price": 800,
-            "validity_date": "21/7/2017",
-            "text": "10% Off"
-          }
-        ],
-        "button_tex": "Buy Now",
-        "features": [
-          {
-            "image_url": "https://www.facebook.com/img/123",
-            "status": true,
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
-          }
-        ]
-      }
-    }
-  }
+	"meta": "",
+	"data": {
+		"message": {
+			"heading": "Simple & transparent pricing",
+			"bottom": "15-Days, No Questions Asked, Full Money-Back uarantee. (Valid only for he Content Subscription)"
+		},
+		"pricing": {
+			"test": {
+				"image_url": "https://www.facebook.com/img/123",
+				"name": "Test",
+				"description": "Includes 4 sample papers and 5 Topic Notes",
+				"price": 550,
+				"offer": {
+					"price": 450,
+					"validity_date": "21/7/2017",
+					"text": "Early bird discount till"
+				},
+				"button_text": "Buy Now",
+				"city_id_list": [{
+						"id": 1,
+						"name": "Mumbai",
+						"package_id": 12
+					},
+					{
+						"id": 2,
+						"name": "Pune",
+						"package_id": 12
+					},
+					{
+						"id": 3,
+						"name": "Ahemdabad",
+						"package_id": 12
+					},
+					{
+						"id": 4,
+						"name": "Nasik",
+						"package_id": 12
+					},
+					{
+						"id": 5,
+						"name": "Bhopal",
+						"package_id": 12
+					},
+					{
+						"id": 6,
+						"name": "Other",
+						"package_id": null
+					}
+				],
+				"features": [{
+						"image_url": "https://www.facebook.com/img/123",
+						"status": true,
+						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
+					},
+					{
+						"image_url": "https://www.facebook.com/img/123",
+						"status": true,
+						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
+					},
+					{
+						"image_url": "https://www.facebook.com/img/123",
+						"status": true,
+						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
+					},
+					{
+						"image_url": "https://www.facebook.com/img/123",
+						"status": true,
+						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
+					}
+				]
+			},
+			"content": {
+				"image_url": "https://www.facebook.com/img/123",
+				"name": "Content",
+				"description": "dcdsc svfv",
+				"price": [{
+						"period": "3 months",
+						"price": 900,
+						"package_id": 12
+					},
+					{
+						"period": "6 months",
+						"price": 1400,
+						"package_id": 12
+					},
+					{
+						"period": "1 year",
+						"price": 2200,
+						"package_id": 12
+					}
+				],
+				"button_tex": "Buy Now",
+				"city_id_list": [
+
+				],
+				"features": [{
+						"image_url": "https://www.facebook.com/img/123",
+						"status": true,
+						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
+					},
+					{
+						"image_url": "https://www.facebook.com/img/123",
+						"status": true,
+						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
+					},
+					{
+						"image_url": "https://www.facebook.com/img/123",
+						"status": true,
+						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
+					},
+					{
+						"image_url": "https://www.facebook.com/img/123",
+						"status": true,
+						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
+					}
+				]
+			},
+			"test_and_content": {
+				"image_url": "https://www.facebook.com/img/123",
+				"name": "Content and Test",
+				"description": "ddwwdwdsa edewsds ",
+				"price": [{
+						"period": "3 months",
+						"price": 900,
+						"offer_price": 800,
+						"validity_date": "21/7/2017",
+						"text": "10% Off",
+						"package_id": [
+							12,
+							13
+						]
+					},
+					{
+						"period": "6 months",
+						"price": 1400,
+						"offer_price": 800,
+						"validity_date": "21/7/2017",
+						"text": "10% Off",
+						"package_id": [
+							12,
+							13
+						]
+					},
+					{
+						"period": "9 months",
+						"price": 1800,
+						"offer_price": 800,
+						"validity_date": "21/7/2017",
+						"text": "10% Off",
+						"package_id": [
+							12,
+							13
+						]
+					}
+				],
+				"button_tex": "Buy Now",
+				"features": [{
+					"image_url": "https://www.facebook.com/img/123",
+					"status": true,
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
+				}]
+			}
+		}
+	}
 }
 ```
 
 6.        
-API Name: City API
-Status: Need to be discuss URL
-URL: /utility/test/city/
-Method: GET
-Header: Platform-Header
-Request: No Query Params
-Response:
+	- API Name: City API
+	- Status: Need to be discuss URL
+	- URL: /utility/test/city/
+	- Method: GET
+	- Header: Platform-Header
+	- Request: No Query Params
+	- Response:
 ```
 {
   "meta": "",
@@ -395,14 +438,15 @@ Response:
   ]
 }
 ```
+
 7.        
-API Name: Class API
-Status: Need to be discuss URL
-URL: /user/class/
-Method: GET
-Header: Platform-Header
-Request: No Query Params
-Response:
+	- API Name: Class API
+	- Status: Need to be discuss URL
+	- URL: /user/class/
+	- Method: GET
+	- Header: Platform-Header
+	- Request: No Query Params
+	- Response:
 ```
 {
   "meta": "",
@@ -460,14 +504,14 @@ Response:
   ]
 }
 ```
-8.
-API Name: Test Schedule API
-Status: Need to be discuss URL
-URL: /user/registration/
-Method: GET
-Header: Platform-Header
-Request: queryparams = city_id
-Response:
+
+8.	- API Name: Test Schedule API
+	- Status: Need to be discuss URL
+	- URL: /user/registration/
+	- Method: GET
+	- Header: Platform-Header
+	- Request: queryparams = city_id
+	- Response:
 ```
 {
   "meta": "",
@@ -493,13 +537,12 @@ Response:
 }
 ```
 
-9.
-API Name: Registration API
-Status: Need to be discuss URL
-URL: /user/registration/
-Method: POST
-Header: Platform-Header
-Request:
+9.	- API Name: Registration API
+	- Status: Need to discuss URL
+	- URL: /user/registration/
+	- Method: POST
+	- Header: Platform-Header
+	- Request:
 ``` 
 {
   "full_name": "Nimesh Kiran Verma",
@@ -512,7 +555,7 @@ Request:
   "refer_code":"Mikin7332"
 }
 ```
-Response:
+	- Response:
 ```
 {
   "meta": "",
@@ -534,12 +577,12 @@ Make error response and status
 ```
 
 10.
-API Name: Test Leads API
-Status: Need to be discuss URL
-URL: /user/lead/
-Method: POST
-Header: Platform-Header
-Request:
+	- API Name: Test Leads API
+	- Status: Need to be discuss URL
+	- URL: /user/lead/
+	- Method: POST
+	- Header: Platform-Header
+	- Request:
 ``` 
 {
   "full_name": "Nimesh Kiran Verma",
@@ -550,7 +593,7 @@ Request:
   "school":"St Xaviers Sr Sec School",
 }
 ``` 
-Response:
+	- Response:
 ```
 {
   "meta": "",
@@ -562,19 +605,19 @@ Response:
 ```
 
 11.
-API Name: Login API
-Status: Need to be discuss URL
-URL: /user/login/
-Method: POST
-Header: Platform-Header
-Request:
+	- API Name: Login API
+	- Status: Need to be discuss URL
+	- URL: /user/login/
+	- Method: POST
+	- Header: Platform-Header
+	- Request:
 ```
 {
   "email":"nimesh.aug11@gmail.com",
   "password":"password123"
 }
 ``` 
-Response: 
+	- Response: 
 ```
 {
   "meta": "",
@@ -597,18 +640,18 @@ Make error response and status
 ```
 
 12.
-API Name: Forgot Password API
-Status: Need to be discuss URL
-URL: /user/forgot_password/
-Method: POST
-Header: Platform-Header
-Request:
+	- API Name: Forgot Password API
+	- Status: Need to be discuss URL
+	- URL: /user/forgot_password/
+	- Method: POST
+	- Header: Platform-Header
+	- Request:
 ```
 {
   "email":"nimesh.aug11@gmail.com",
 }
 ``` 
-Response:
+	- Response:
 ```
 {
   "meta": "",
@@ -629,14 +672,14 @@ Make error response and status
 ```
 
 13.1
-API Name: Reset Password API
-Status: Need to be discuss URL
-URL: /user/forgot_password_link/
-Method: GET
-Header: Platform-Header
-Request: Query Params
+	- API Name: Reset Password API
+	- Status: Need to be discuss URL
+	- URL: /user/forgot_password_link/
+	- Method: GET
+	- Header: Platform-Header
+	- Request: Query Params
 id=4675&code=uAm-wlA6HKsuZsZYREZlgfkJzhR7ikG3 
-Response:
+	- Response:
 ```
 {
   "meta": "",
@@ -656,12 +699,12 @@ Make error response and status
 }
 ```
 13.2
-API Name: Reset Password API
-Status: Need to be discuss URL
-URL: /user/forgot_password_link/
-Method: POST
-Header: Platform-Header
-Request:
+	- API Name: Reset Password API
+	- Status: Need to be discuss URL
+	- URL: /user/forgot_password_link/
+	- Method: POST
+	- Header: Platform-Header
+	- Request:
 ```
 {
   "id": "4675",
@@ -670,7 +713,7 @@ Request:
   "password":"new_password"
 }
 ``` 
-Response:
+	- Response:
 ```
 {
   "meta": "",
@@ -683,13 +726,13 @@ Response:
 #### Loggedin APIs
 
 14.1
-API Name: Profile API
-Status: Need to be discuss URL
-URL: /user/123/profile/
-Method: GET
-Header: Loggedin-Platform-Header
-Request: Query Params None
-Response:
+	- API Name: Profile API
+	- Status: Need to be discuss URL
+	- URL: /user/123/profile/
+	- Method: GET
+	- Header: Loggedin-Platform-Header
+	- Request: Query Params None
+	- Response:
 ```
 {
   "meta": "",
@@ -731,13 +774,13 @@ Response:
 ```
 
 14.2
-API Name: Profile API
-Status: Need to be discuss URL
-URL: /user/profile/
-Method: POST
+	- API Name: Profile API
+	- Status: Need to be discuss URL
+	- URL: /user/profile/
+	- Method: POST
 Header: Loggedin-Platform-Header
-Why are we returning the same thing
-Request:
+Why 	- are we returning the same thing
+	- Request:
 ```
 {
   "customer_id": 123,
@@ -750,7 +793,7 @@ Request:
   "profile_pic": "https://9gag.com/gag/a5nEdzg"
 }
 ```
-Response:
+	- Response:
 ```
 {
   "meta": "",
@@ -792,12 +835,12 @@ Response:
 ```
 
 15.
-API Name: Change Password API
-Status: Need to be discuss URL
-URL: /user/123/password/
-Method: POST
-Header: Loggedin-Platform-Header
-Request: 
+	- API Name: Change Password API
+	- Status: Need to be discuss URL
+	- URL: /user/123/password/
+	- Method: POST
+	- Header: Loggedin-Platform-Header
+	- Request: 
 ```
 {
     "customer_id": 123,
@@ -805,7 +848,7 @@ Request:
     "new_password": "newpass123"
 }
 ```
-Response:
+	- Response:
 ```
 {
   "meta": "",
@@ -814,14 +857,14 @@ Response:
 ```
 
 16.
-API Name: Order API
-Status: Need to be discuss URL
-URL: /user/123/orders/
-Method: POST
-Header: Loggedin-Platform-Header
-Request: None
+	- API Name: Order API
+	- Status: Need to be discuss URL
+	- URL: /user/123/orders/
+	- Method: POST
+	- Header: Loggedin-Platform-Header
+	- Request: None
 Remark: If the customer has enrolled through the school the **amount** will be the price paid to the school otherwise it will be price they paid after applying both special offer and the coupon code to us without subtracting the wallet amount
-Response:
+	- Response:
 ```
 {
   "meta": "",
@@ -863,13 +906,13 @@ Response:
 ```
 
 17.
-API Name: Refer API
-Status: Need to be discuss URL
-URL: /user/123/refer/
-Method: GET
-Header: Loggedin-Platform-Header
-Request: Query Params None
-Response:
+	- API Name: Refer API
+	- Status: Need to be discuss URL
+	- URL: /user/123/refer/
+	- Method: GET
+	- Header: Loggedin-Platform-Header
+	- Request: Query Params None
+	- Response:
 ```
 {
 	"meta": "",
@@ -881,7 +924,7 @@ Response:
 		"referral_earnings": 100,
 		"referral_message": {
 			"email": {
-				"subject": "somehtinhfcnd",
+				"subject": "some text",
 				"body": "Hi - wanted to share this very interesting Logical Reasoning Competition designed by IIT-IIM alumni, to initiate kids into logical thinking.  I think it provides a great exposure to kids. %0aThe exam is designed to stimulate the analytical thinking in kids and is conducted for SrKG to Class 9 kids. For Sr KG and Grade 1 kids, their invigilators read and explain the question to kids.%0aYou could DOWNLOAD a FREE SAMPLE PAPER from the link below: https://www.logiqids.com/user/register?c=Nimesh773"
 			},
 			"facebook": {
@@ -895,14 +938,36 @@ Response:
 }
 ```
 
+17. #CHECK_THIS
+	- API Name: Refer SMS API
+	- Status: Need to be discuss URL
+	- URL: /user/123/refer/getsms
+	- Method: POST
+	- Header: Loggedin-Platform-Header
+	- Request:
+```
+{
+	"phone_number": 9999999999
+}
+```
+	- Response:
+```
+{
+	"meta": "",
+	"data": {
+		"message": "The refer link has been sent to"  
+	}
+}
+```
+
 18.
-API Name: User Product APIs
-Status: Need to be discuss URL
-URL: /user/123/products/
-Method: GET
-Header: Loggedin-Platform-Header
-Request: 
-Response:
+	- API Name: User Product APIs
+	- Status: Need to be discuss URL
+	- URL: /user/123/products/
+	- Method: GET
+	- Header: Loggedin-Platform-Header
+	- Request: 
+	- Response:
 ```
 {
   "meta": "",
@@ -941,13 +1006,13 @@ Response:
 ```
 
 19.
-API Name: Mega Menu
-Status: Need to be discuss URL
-URL: /user/id/menu
-Method: GET
-Header: Loggedin-Platform-Header
-Request:
-Response:
+	- API Name: Mega Menu
+	- Status: Need to be discuss URL
+	- URL: /user/id/menu
+	- Method: GET
+	- Header: Loggedin-Platform-Header
+	- Request:
+	- Response:
 ```
 {
   "meta": "",
@@ -1000,13 +1065,13 @@ Response:
 ```
 
 20.
-API Name: Test subscription
-Status: Need to be discuss URL
-URL: /product/test/
-Method: GET
-Header: Platform-Header
-Request:
-Response:
+	- API Name: Test subscription
+	- Status: Need to be discuss URL
+	- URL: /product/test/
+	- Method: GET
+	- Header: Platform-Header
+	- Request:
+	- Response:
 ```
 {
   "meta": "",
@@ -1059,12 +1124,12 @@ Response:
 ```
 
 21.
-API Name: Order Review API
-Status: Need to be discuss URL
-URL: /user/123/order/review/
-Method: POST
-Header: Loggedin-Platform-Header
-Request:
+	- API Name: Order Review API
+	- Status: Need to be discuss URL
+	- URL: /user/123/order/review/
+	- Method: POST
+	- Header: Loggedin-Platform-Header
+	- Request:
 ```
 {
   "package_ids": [
@@ -1075,7 +1140,7 @@ Request:
 //  "content": true
 }
 ```
-Response:
+	- Response:
 ```
 {
   "meta": "",
@@ -1110,18 +1175,18 @@ Response:
 ```
  
 18
-API Name: Coupon API
-Status: Need to be discuss URL
-URL: /coupon/
-Method: POST
-Header: Loggedin-Platform-Header
-Request:
+	- API Name: Coupon API
+	- Status: Need to be discuss URL
+	- URL: /coupon/
+	- Method: POST
+	- Header: Loggedin-Platform-Header
+	- Request:
 ```
 {
   "Coupon_code": LOGIQ100,
 }
 ```
-Response:
+	- Response:
 ```
 {
   "meta": "",
@@ -1132,12 +1197,12 @@ Response:
 }
 ```
 
-API Name: Checkout API
-Status: Need to be discuss URL
-URL: /user/123/checkout/
-Method: POST
-Header: Loggedin-Platform-Header
-Request:
+	- API Name: Checkout API
+	- Status: Need to be discuss URL
+	- URL: /user/123/checkout/
+	- Method: POST
+	- Header: Loggedin-Platform-Header
+	- Request:
 ```
 {
  "package_ids": [
@@ -1148,7 +1213,7 @@ Request:
   "wallet_applied":true
 }
 ```
-Response:
+	- Response:
 ```
 {
   "meta": "",
@@ -1160,19 +1225,19 @@ Response:
 ```
 
 19
-API Name: Payment Details API
-Status: Need to be discuss URL
-URL: /user/123/payment_details/
-Method: POST
-Header: Loggedin-Platform-Header
-Request:
+	- API Name: Payment Details API
+	- Status: Need to be discuss URL
+	- URL: /user/123/payment_details/
+	- Method: POST
+	- Header: Loggedin-Platform-Header
+	- Request:
 ```
 {
   "order_id": 123
   "state_id": 1
 }
 ```
-Response:
+	- Response:
 ```
 {
   "meta": "",
@@ -1188,13 +1253,13 @@ Response:
 
 
 20
-API Name: Weekly leaderboard API
-Status: Need to be discuss URL
-URL: /results/toppers/weekly/
-Method: GET
-Header: Loggedin-Platform-Header
-Request:None
-Response:
+	- API Name: Weekly leaderboard API
+	- Status: Need to be discuss URL
+	- URL: /results/toppers/weekly/
+	- Method: GET
+	- Header: Loggedin-Platform-Header
+	- Request:None
+	- Response:
 ```
 {
   "meta": "",
@@ -1241,13 +1306,13 @@ Response:
 ```
 
 21
-API Name: Topic Notes API
-Status: Need to be discuss URL
-URL: /test/topic_notes/
-Method: POST
-Header: Loggedin-Platform-Header
-Request: None
-Response:
+	- API Name: Topic Notes API
+	- Status: Need to be discuss URL
+	- URL: /test/topic_notes/
+	- Method: POST
+	- Header: Loggedin-Platform-Header
+	- Request: None
+	- Response:
 ```
 {
   "meta": "",
@@ -1284,13 +1349,13 @@ Response:
 ```
 
 22
-API Name: Current Test Schedule API
-Status: Need to be discuss URL
-URL: /test/scheduel/
-Method: POST
-Header: Loggedin-Platform-Header
-Request: None
-Response:
+	- API Name: Current Test Schedule API
+	- Status: Need to be discuss URL
+	- URL: /test/scheduel/
+	- Method: POST
+	- Header: Loggedin-Platform-Header
+	- Request: None
+	- Response:
 ```
 {
   "meta": "",
@@ -1314,13 +1379,13 @@ Response:
 ```
 
 23
-API Name: Sample Paper Status API
-Status: Need to be discuss URL
-URL: /test/sample_paper/status/
-Method: POST
-Header: Loggedin-Platform-Header
-Request: None
-Response:
+	- API Name: Sample Paper Status API
+	- Status: Need to be discuss URL
+	- URL: /test/sample_paper/status/
+	- Method: POST
+	- Header: Loggedin-Platform-Header
+	- Request: None
+	- Response:
 ```
 {
   "meta": "",
@@ -1371,13 +1436,13 @@ pic_c
 pic_d
 
 24.
-API Name: Sample Paper Download API
-Status: Need to be discuss URL
-URL: /test/sample_paper/<sample_paper_id>/
-Method: POST
-Header: Loggedin-Platform-Header
-Request: None
-Response:
+	- API Name: Sample Paper Download API
+	- Status: Need to be discuss URL
+	- URL: /test/sample_paper/<sample_paper_id>/
+	- Method: POST
+	- Header: Loggedin-Platform-Header
+	- Request: None
+	- Response:
 ```
 {
   "meta": "",
@@ -1388,13 +1453,13 @@ Response:
 ```
 
 25.
-API Name: Sample Paper Solutions Download API
-Status: Need to be discuss URL
-URL: /test/sample_paper/<sample_paper_id>/solutions/
-Method: POST
-Header: Loggedin-Platform-Header
-Request: None
-Response:
+	- API Name: Sample Paper Solutions Download API
+	- Status: Need to be discuss URL
+	- URL: /test/sample_paper/<sample_paper_id>/solutions/
+	- Method: POST
+	- Header: Loggedin-Platform-Header
+	- Request: None
+	- Response:
 ```
 {
   "meta": "",
@@ -1405,12 +1470,12 @@ Response:
 ```
 
 26
-API Name: Sample Paper Answers Submit API
-Status: Need to be discuss URL
-URL: /test/sample_paper/<sample_paper_id>/answers/
-Method: POST
-Header: Loggedin-Platform-Header
-Request: 
+	- API Name: Sample Paper Answers Submit API
+	- Status: Need to be discuss URL
+	- URL: /test/sample_paper/<sample_paper_id>/answers/
+	- Method: POST
+	- Header: Loggedin-Platform-Header
+	- Request: 
 ```
 {
   "answers": [
@@ -1448,7 +1513,7 @@ Request:
 }
 ```
 
-Response:
+	- Response:
 ```
 {
   "meta": "",
@@ -1457,13 +1522,13 @@ Response:
 ```
 
 25.2
-API Name: Sample Paper Answers Submit API
-Status: Need to be discuss URL
-URL: /test/sample_paper/<sample_paper_id>/answers/
-Method: GET
-Header: Loggedin-Platform-Header
-Request: None
-Response:
+	- API Name: Sample Paper Answers Submit API
+	- Status: Need to be discuss URL
+	- URL: /test/sample_paper/<sample_paper_id>/answers/
+	- Method: GET
+	- Header: Loggedin-Platform-Header
+	- Request: None
+	- Response:
 ```
 {
   "meta": "",
@@ -1493,13 +1558,13 @@ Response:
 ```
 
 27
-API Name: Sample Paper Attempt complete API
-Status: Need to be discuss URL
-URL: /test/sample_paper/<sample_paper_id>/attempt/
-Method: POST
-Header: Loggedin-Platform-Header
-Request: None
-Response:
+	- API Name: Sample Paper Attempt complete API
+	- Status: Need to be discuss URL
+	- URL: /test/sample_paper/<sample_paper_id>/attempt/
+	- Method: POST
+	- Header: Loggedin-Platform-Header
+	- Request: None
+	- Response:
 ```
 {
   "meta": "",
@@ -1509,13 +1574,13 @@ Response:
 ```
 
 28.1
-API Name: Sample Paper Question API
-Status: Need to be discuss URL
-URL: /test/sample_paper/<sample_paper_id>/question/<question_id>/
-Method: GET
-Header: Loggedin-Platform-Header
-Request: None
-Response:
+	- API Name: Sample Paper Question API
+	- Status: Need to be discuss URL
+	- URL: /test/sample_paper/<sample_paper_id>/question/<question_id>/
+	- Method: GET
+	- Header: Loggedin-Platform-Header
+	- Request: None
+	- Response:
 ```
 {
   "meta": "",
@@ -1552,18 +1617,18 @@ Response:
 ```
 
 29
-API Name: Sample Paper Question Answer API
-Status: Need to be discuss URL
-URL: /test/sample_paper/<sample_paper_id>/question/<question_id>/answer
-Method: POST
-Header: Loggedin-Platform-Header
-Request: 
+	- API Name: Sample Paper Question Answer API
+	- Status: Need to be discuss URL
+	- URL: /test/sample_paper/<sample_paper_id>/question/<question_id>/answer
+	- Method: POST
+	- Header: Loggedin-Platform-Header
+	- Request: 
 ```
 {
   "answer_id":"a"
 }
 ```
-Response:
+	- Response:
 ```
 {
   "meta": "",
@@ -1571,13 +1636,13 @@ Response:
 }
 ```
 30
-API Name: Sample Paper Analysis API
-Status: Need to be discuss URL
-URL: /test/sample_paper/<sample_paper_id>/analysis/
-Method: POST
-Header: Loggedin-Platform-Header
-Request: None
-Response:
+	- API Name: Sample Paper Analysis API
+	- Status: Need to be discuss URL
+	- URL: /test/sample_paper/<sample_paper_id>/analysis/
+	- Method: POST
+	- Header: Loggedin-Platform-Header
+	- Request: None
+	- Response:
 ```
 {
   "meta": "",
@@ -1736,13 +1801,13 @@ Response:
 
 
 31
-API Name: Sample Paper Analysis API
-Status: Need to be discuss URL
-URL: /test/sample_paper/analysis/
-Method: POST
-Header: Loggedin-Platform-Header
-Request: None
-Response:
+	- API Name: Sample Paper Analysis API
+	- Status: Need to be discuss URL
+	- URL: /test/sample_paper/analysis/
+	- Method: POST
+	- Header: Loggedin-Platform-Header
+	- Request: None
+	- Response:
 {
   "meta": "",
   "data": {
@@ -1823,13 +1888,13 @@ Response:
 }
 
 32
-API Name: Past Test Analysis API
-Status: Need to be discuss URL
-URL: /test/past/analysis/
-Method: POST
-Header: Loggedin-Platform-Header
-Request: None
-Response:
+	- API Name: Past Test Analysis API
+	- Status: Need to be discuss URL
+	- URL: /test/past/analysis/
+	- Method: POST
+	- Header: Loggedin-Platform-Header
+	- Request: None
+	- Response:
 {
   "meta": "",
   "data": {
@@ -1949,13 +2014,13 @@ Response:
 
 
 33
-API Name: Past Test Detailed Analysis API
-Status: Need to be discuss URL
-URL: /test/<test_id>/analysis/
-Method: POST
-Header: Loggedin-Platform-Header
-Request: None
-Response:
+	- API Name: Past Test Detailed Analysis API
+	- Status: Need to be discuss URL
+	- URL: /test/<test_id>/analysis/
+	- Method: POST
+	- Header: Loggedin-Platform-Header
+	- Request: None
+	- Response:
 {
   "meta": "",
   "data": {
@@ -2227,13 +2292,13 @@ Response:
 
 
 31
-API Name: Sample Paper Analysis API
-Status: Need to be discuss URL
-URL: /content/package_subscribed/<package_subscribtion_id>/analysis/
-Method: POST
-Header: Loggedin-Platform-Header
-Request: None
-Response:
+	- API Name: Sample Paper Analysis API
+	- Status: Need to be discuss URL
+	- URL: /content/package_subscribed/<package_subscribtion_id>/analysis/
+	- Method: POST
+	- Header: Loggedin-Platform-Header
+	- Request: None
+	- Response:
 {
 
   "meta": "",
@@ -2315,13 +2380,13 @@ Response:
 
 
 33
-API Name: Topic API
-Status: Need to be discuss URL
-URL: /content/topics/
-Method: POST
-Header: Loggedin-Platform-Header
-Request: None
-Response:
+	- API Name: Topic API
+	- Status: Need to be discuss URL
+	- URL: /content/topics/
+	- Method: POST
+	- Header: Loggedin-Platform-Header
+	- Request: None
+	- Response:
 {
 
   "meta": "",
@@ -2364,13 +2429,13 @@ Response:
 
 
 34
-API Name:Topic worksheet Status API
-Status: Need to be discuss URL
-URL: /content/topic/<topic_id>/worksheet/
-Method: POST
-Header: Loggedin-Platform-Header
-Request: None
-Response:
+	- API Name:Topic worksheet Status API
+	- Status: Need to be discuss URL
+	- URL: /content/topic/<topic_id>/worksheet/
+	- Method: POST
+	- Header: Loggedin-Platform-Header
+	- Request: None
+	- Response:
 {
   "meta": "",
   "data": {
@@ -2382,13 +2447,13 @@ Response:
 
 
 35
-API Name:Topic worksheet Status API
-Status: Need to be discuss URL
-URL: /content/topic/<topic_id>/worksheet/
-Method: POST
-Header: Loggedin-Platform-Header
-Request: None
-Response:
+	- API Name:Topic worksheet Status API
+	- Status: Need to be discuss URL
+	- URL: /content/topic/<topic_id>/worksheet/
+	- Method: POST
+	- Header: Loggedin-Platform-Header
+	- Request: None
+	- Response:
 {
   "meta": "",
   "data": {
@@ -2399,13 +2464,13 @@ Response:
 }
 
 36
-API Name: Sample Paper Analysis API
-Status: Need to be discuss URL
-URL: /test/sample_paper/analysis/
-Method: POST
-Header: Loggedin-Platform-Header
-Request: None
-Response:
+	- API Name: Sample Paper Analysis API
+	- Status: Need to be discuss URL
+	- URL: /test/sample_paper/analysis/
+	- Method: POST
+	- Header: Loggedin-Platform-Header
+	- Request: None
+	- Response:
 {
   "meta": "",
   "data": {
@@ -2467,13 +2532,13 @@ Response:
 }
 
 36
-API Name: Topic Notes API
-Status: Need to be discuss URL
-URL: /test/topic/<topic_id>/notes/
-Method: POST
-Header: Loggedin-Platform-Header
-Request: None
-Response:
+	- API Name: Topic Notes API
+	- Status: Need to be discuss URL
+	- URL: /test/topic/<topic_id>/notes/
+	- Method: POST
+	- Header: Loggedin-Platform-Header
+	- Request: None
+	- Response:
 {
   "meta": "",
   "data": {
@@ -2488,13 +2553,13 @@ Response:
 }
 
 37
-API Name: Topic Past worksheet API
-Status: Need to be discuss URL
-URL: /test/topic/past_worksheet/
-Method: POST
-Header: Loggedin-Platform-Header
-Request: None
-Response:
+	- API Name: Topic Past worksheet API
+	- Status: Need to be discuss URL
+	- URL: /test/topic/past_worksheet/
+	- Method: POST
+	- Header: Loggedin-Platform-Header
+	- Request: None
+	- Response:
 {
   "meta": "",
   "data": {
@@ -2540,13 +2605,13 @@ Response:
 
 
 38
-API Name: Topic Past worksheet API
-Status: Need to be discuss URL
-URL: /test/topic/<topic_id>/past_worksheet/
-Method: POST
-Header: Loggedin-Platform-Header
-Request: None
-Response:
+	- API Name: Topic Past worksheet API
+	- Status: Need to be discuss URL
+	- URL: /test/topic/<topic_id>/past_worksheet/
+	- Method: POST
+	- Header: Loggedin-Platform-Header
+	- Request: None
+	- Response:
 {
   "meta": "",
   "data": {
@@ -2617,14 +2682,14 @@ Response:
 
 
 39
-API Name: Worksheet Download API
-Status: Need to be discuss URL
-URL: /content/topic/<topic_id>/worksheet/<worksheet_id>
+	- API Name: Worksheet Download API
+	- Status: Need to be discuss URL
+	- URL: /content/topic/<topic_id>/worksheet/<worksheet_id>
 worksheet_id can be latest
-Method: POST
-Header: Loggedin-Platform-Header
-Request: None
-Response:
+	- Method: POST
+	- Header: Loggedin-Platform-Header
+	- Request: None
+	- Response:
 {
   "meta": "",
   "data": {
@@ -2633,14 +2698,14 @@ Response:
 }
 
 40
-API Name: Worksheet Solutions Download API
-Status: Need to be discuss URL
-URL: /content/topic/<topic_id>/worksheet/<worksheet_id>/solutions/
+	- API Name: Worksheet Solutions Download API
+	- Status: Need to be discuss URL
+	- URL: /content/topic/<topic_id>/worksheet/<worksheet_id>/solutions/
 worksheet_id can be latest
-Method: POST
-Header: Loggedin-Platform-Header
-Request: None
-Response:
+	- Method: POST
+	- Header: Loggedin-Platform-Header
+	- Request: None
+	- Response:
 {
   "meta": "",
   "data": {
@@ -2649,12 +2714,12 @@ Response:
 }
 
 41.1
-API Name: Worksheet Answers Submit API
-Status: Need to be discuss URL
-URL: /content/topic/<topic_id>/answers/
-Method: POST
-Header: Loggedin-Platform-Header
-Request: 
+	- API Name: Worksheet Answers Submit API
+	- Status: Need to be discuss URL
+	- URL: /content/topic/<topic_id>/answers/
+	- Method: POST
+	- Header: Loggedin-Platform-Header
+	- Request: 
 {
   "answers": [
     {
@@ -2690,43 +2755,42 @@ Request:
   ]
 }
 
-Response:
+	- Response:
 {
-  "meta": "",
-  "data": {
-
-    "heading": "Topic : Puzzles Worksheet Download Date : 11-Jul-2017",
-    "result": [{
-        "name": "Question Asked",
-        "value": 15
-      },
-      {
-        "name": "Attempted",
-        "value": 1
-      },
-      {
-        "name": "Correct",
-        "value": 0
-      },
-      {
-        "name": "Score",
-        "value": 0
-      }
-
-    ]
-
-  }
+    "meta":"",
+    "data":{
+        "heading":"Topic : Puzzles Worksheet Download Date : 11-Jul-2017",
+        "result":[
+            {
+                "name":"Question Asked",
+                "value":15
+            },
+            {
+                "name":"Attempted",
+                "value":1
+            },
+            {
+                "name":"Correct",
+                "value":0
+            },
+            {
+                "name":"Score",
+                "value":0
+            }
+        ]
+    }
 }
-
+```
 
 41.2
-API Name: Worksheet Answers Submit API
-Status: Need to be discuss URL
-URL:  /content/topic/<topic_id>/worksheet/<worksheet_id>/solutions/
-Method: GET
-Header: Loggedin-Platform-Header
-Request: None
-Response:
+	- API Name: Worksheet Answers Submit API
+	- Status: Need to be discuss URL
+	- URL:  /content/topic/<topic_id>/worksheet/<worksheet_id>/solutions/
+	- Method: GET
+	- Header: Loggedin-Platform-Header
+	- Request: None
+	- Response:
+```javascript
 {
   "meta": "",
   "data": {
@@ -2753,30 +2817,33 @@ Response:
     }
   }
 }
+```
 
 43
-API Name: Worksheet Attempt complete API
-Status: Need to be discuss URL
-URL:  /content/topic/<topic_id>/worksheet/<worksheet_id>/attempt/
+	- API Name: Worksheet Attempt complete API
+	- Status: Need to be discuss URL
+	- URL:  /content/topic/<topic_id>/worksheet/<worksheet_id>/attempt/
 worksheet_id can be latest
-Method: POST
-Header: Loggedin-Platform-Header
-Request: None
-Response:
+	- Method: POST
+	- Header: Loggedin-Platform-Header
+	- Request: None
+	- Response:
+```javascript
 {
   "meta": "",
-  "data": {
+  "data": {}
 }
-}
+```
 
 44
-API Name: Worksheet Question API
-Status: Need to be discuss URL
-URL: /content/topic/<topic_id>/worksheet/<worksheet_id>/question/<question_id>/
-Method: GET
-Header: Loggedin-Platform-Header
-Request: None
-Response:
+	- API Name: Worksheet Question API
+	- Status: Need to be discuss URL
+	- URL: /content/topic/<topic_id>/worksheet/<worksheet_id>/question/<question_id>/
+	- Method: GET
+	- Header: Loggedin-Platform-Header
+	- Request: None
+	- Response:
+```javascript
 {
   "meta": "",
   "data": {
@@ -2809,30 +2876,37 @@ Response:
     ]
   }
 }
+```
 
 45
-API Name: Worksheet Question Answer API
-Status: Need to be discuss URL
-URL: /content/topic/<topic_id>/worksheet/<worksheet_id>/question/<question_id>/answer
-Method: POST
-Header: Loggedin-Platform-Header
-Request: {
+	- API Name: Worksheet Question Answer API
+	- Status: Need to be discuss URL
+	- URL: /content/topic/<topic_id>/worksheet/<worksheet_id>/question/<question_id>/answer
+	- Method: POST
+	- Header: Loggedin-Platform-Header
+	- Request: 
+```javascript
+{
   "answer_id":"a"
 }
-Response:
+```
+	- Response:
+```javascript
 {
   "meta": "",
   "data": {}
 }
+```
 
 46
-API Name: Worksheet Analysis API
-Status: Need to be discuss URL
-URL:/content/topic/<topic_id>/worksheet/<worksheet_id>/analysis/
-Method: POST
-Header: Loggedin-Platform-Header
-Request: None
-Response:
+	- API Name: Worksheet Analysis API
+	- Status: Need to be discuss URL
+	- URL:/content/topic/<topic_id>/worksheet/<worksheet_id>/analysis/
+	- Method: POST
+	- Header: Loggedin-Platform-Header
+	- Request: None
+	- Response:
+```javascript
 {
   "meta": "",
   "data": {
@@ -2986,3 +3060,4 @@ Response:
 
   }
 }
+```
