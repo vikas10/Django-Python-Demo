@@ -33,11 +33,22 @@ This document aims to provide a general understanding of the backend APIs and it
 
 ### Definitions:
 
-#### Generic API Response to handle errors: 
+#### 1. Response: 
+##### 1.1. Meta-Data-Response:
+A response is called Meta-Data-Response when it satisfies the following JSON schema
+```
+{
+	"meta" : "This is used to provide any meta information about the API, mostly not used by clients (browsers/apps)",
+	"data" : { 
+				"data_key":"data value" 
+			 }
+}
+```
 
-We will be selecting the following 5 Http Status codes to cover our response cases 
-
-##### Success: __200__
+##### 1.2. HTTP_200_OK
+A __Meta-Data-Response__ to represent the Successfull API call
+Status: __200__
+Generic __200__ JSON:
 ```
 {
 	"meta":"",
@@ -46,44 +57,55 @@ We will be selecting the following 5 Http Status codes to cover our response cas
 	}	
 }
 ```
-##### Bad Request: __400__
 
+##### 1.3. HTTP_400_BAD_REQUEST
+A __Meta-Data-Response__ to represent the response where client call the API with incorrect request.
+Status: __400__
 Generic __400__ JSON:
 ```
 {
-	"error": "invalid_request",
-	"description": "there is something wrong with the request data"	
+  "meta": "",
+  "data": {
+    "error_message": "This is an example message: The Email Id you are using is already registered with us. Kindly use a different one",
+    "error_data": {}
+  }
 }
 ```
-##### Forbidden: __403__
-
+##### 1.4. HTTP_403_FORBIDDEN
+A __Meta-Data-Response__ to represent the response where client tries to access the resource which it doesnt have the acess.
+Status: __403__
 Generic __403__ JSON:
 ```
 {
-	"error": "forbidden_request",
-	"description": "You are not allowed to access this information"
+  "meta": "",
+  "data": {
+    "error_message": "This is an example message: You are not allowed to view this!",
+    "error_data": {}
+  }
 }
 ```
-##### Not Found: __404__
-
+##### 1.5. HTTP_404_NOT_FOUND
+A __Meta-Data-Response__ to represent the response where client tries to access the resource which does not exist.
+Status: __404__
 Generic __404__ JSON:
 ```
 {
-	"error": "not_found",
-	"description": "This response does not exist"
+  "meta": "",
+  "data": {
+    "error_message": "This is an example message: The User Id:123 doesnt not exists",
+    "error_data": {}
+  }
 }
 ```
-##### Internal Server Error: __500__
-#CHECK: Use something else for runtime errors
+##### 1.6. HTTP_500_INTERNAL_SERVER_ERROR __500__
+A __Meta-Data-Response__ to represent the response where code fails at the server end.
+Status: __500__
 Generic __500__ JSON:
 ```
-{
-	"error": "internal_server_error",
-	"description": "There was some error with the API code",
-	"debug_message": //whatever message the catch exception decorator returns
-} 
+{} 
 ```
-#### LoggedIn-Header:
+#### 2. Response: 
+##### 2.1. LoggedIn-Header:
 
 A header is defined as LoggedIn-Header when the header has the session token in it. This type of header is used for the user who is the registered user and has logged into the system.
 
@@ -100,7 +122,7 @@ logiqid_<customer_id>_<uuid>
 ```
 where **uuid** is a 32 Character unique text used for user identification
 
-#### Platform-Header:
+##### 2.2. Platform-Header:
 
 A header is defined as Platform-Header when the header has the information about the platform which is calling the API. This type of header is used for the cases when the same API needs to served differently for different Platforms.
  
@@ -134,19 +156,8 @@ Platform-Header
 }
 ```
 
-#### Versioning:
+#### 3. Versioning:
 We will be utilising the URL based Versioning i.e we will use the version number in the URL.
-
-#### Meta-Data-Response:
-A response is called Meta-Data-Response when it satisfies the following JSON schema
-```
-{
-	"meta" : "This is used to provide any meta information about the API, mostly not used by clients (browsers/apps)",
-	"data" : { 
-				"data_key":"data value" 
-			 }
-}
-```
 
 ### Documentation
 
