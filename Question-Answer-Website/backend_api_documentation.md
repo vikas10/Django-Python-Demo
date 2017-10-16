@@ -327,37 +327,6 @@ We will be utilising the URL based Versioning i.e we will use the version number
 					"text": "Early bird discount till"
 				},
 				"button_text": "Buy Now",
-				"city_id_list": [{
-						"id": 1,
-						"name": "Mumbai",
-						"package_id": 12
-					},
-					{
-						"id": 2,
-						"name": "Pune",
-						"package_id": 12
-					},
-					{
-						"id": 3,
-						"name": "Ahemdabad",
-						"package_id": 12
-					},
-					{
-						"id": 4,
-						"name": "Nasik",
-						"package_id": 12
-					},
-					{
-						"id": 5,
-						"name": "Bhopal",
-						"package_id": 12
-					},
-					{
-						"id": 6,
-						"name": "Other",
-						"package_id": null
-					}
-				],
 				"features": [{
 						"image_url": "https://www.facebook.com/img/123",
 						"status": true,
@@ -562,35 +531,58 @@ We will be utilising the URL based Versioning i.e we will use the version number
 }
 ```
 
-8.	- API Name: Test Schedule API
+8.	- API Name: Test Info API
 	- Status: Need to be discuss URL
-	- URL: /user/registration/
+	- URL: /test/info/
 	- Method: GET
 	- Header: Platform-Header
-	- Request: queryparams = city_id
+	- Request: {}
 	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 > __HTTP/1.1 200 OK__
 ```
 {
   "meta": "",
   "data": {
-  "message": {
-    "heading": "Tentative test schedule:"
-  },
-  "test_schedule": [
-    {
-      "name": "Level 1:",
-      "image_url": "https://www.facebook.com/img/123",
-      "schedule": "Nov/Dec 2017",
-      "footnote": "(Exact date to depend on the centre)"
-    },
-    {
-      "name": "Level 2:",
-      "image_url": "https://www.facebook.com/img/123",
-      "schedule": "April 2018",
-      "footnote": "(Only for eligible candidates)"
-    }
-  ]
+    "city_data": [
+      {
+        "city_id": 1,
+        "name": "Mumbai",
+        "package_id": 1,
+        "test_schedule": [
+          {
+            "name": "Level 1:",
+            "image_url": "https://www.facebook.com/img/123",
+            "schedule": "October 29",
+            "venue": "Khar Education Society (Khar) & DD Rashtriya Shala (Ghatkopar)"
+          },
+          {
+            "name": "Level 2:",
+            "image_url": "https://www.facebook.com/img/123",
+            "schedule": "November 12",
+            "venue": "Gopi Birla Memorial School(Walkeshwar) & PPS Kandivali (Kandivali) & C P Goenka International School, Thane"
+          }
+        ]
+      },
+      {
+        "city_id": 1,
+        "name": "Mumbai",
+        "package_id": 1,
+        "test_schedule": [
+          {
+            "name": "Level 1:",
+            "image_url": "https://www.facebook.com/img/123",
+            "schedule": "October 29",
+            "venue": "Khar Education Society (Khar) & DD Rashtriya Shala (Ghatkopar)"
+          },
+          {
+            "name": "Level 2:",
+            "image_url": "https://www.facebook.com/img/123",
+            "schedule": "November 12",
+            "venue": "Gopi Birla Memorial School(Walkeshwar) & PPS Kandivali (Kandivali) & C P Goenka International School, Thane"
+          }
+        ]
+      }
+    ]
   }
 }
 ```
@@ -788,7 +780,7 @@ If the school name is valid but present in the city specified by the city_id
   "password":"password123"
 }
 ``` 
-	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
+	- Response: __EXCEPTIONED_GENERIC_STATUS_RESPONSE_FORMAT__
 > __HTTP/1.1 200 OK__ 
 ```
 {
@@ -817,13 +809,13 @@ If the user credentials are not correct
 	- URL: /user/forgot_password/
 	- Method: POST
 	- Header: Platform-Header
-	- Request: __EXCEPTIONED_GENERIC_STATUS_RESPONSE_FORMAT__
+	- Request: 
 ```
 {
   "email":"nimesh.aug11@gmail.com",
 }
 ``` 
-	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
+	- Response: __EXCEPTIONED_GENERIC_STATUS_RESPONSE_FORMAT__
 > __HTTP/1.1 200 OK__
 ```
 {
@@ -1146,9 +1138,9 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 ```
 
 18.
-	- API Name: User Product APIs
+	- API Name: User Account Info
 	- Status: Need to be discuss URL
-	- URL: /user/123/products/
+	- URL: /user/123/account/
 	- Method: GET
 	- Header: Loggedin-Platform-Header
 	- Request: 
@@ -1158,16 +1150,21 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 {
   "meta": "",
   "data": {
+    "wallet":{
+        "balance":900,
+        "spendable":400,
+    },
+    "city_id": 1,
     "products": {
       "test": [
         {
-          "id": 123,
+          "package_id": 123,
           "name": "Mumbai 23 Dec Test",
           "subscription_date": "dd/mm/yyyy",
           "active": true
         },
         {
-          "id": 124,
+          "package_id": 124,
           "name": "Mumbai 29 Dec Test",
           "subscription_date": "dd/mm/yyyy",
           "active": false
@@ -1175,12 +1172,12 @@ Remark: If the customer has enrolled through the school the **amount** will be t
       ],
       "content": [
         {
-          "id": 123,
+          "package_id": 123,
           "name": "Annual Content",
           "subscription_date": "dd/mm/yyyy"
         },
         {
-          "id": 124,
+          "package_id": 124,
           "name": "Summer Content",
           "subscription_date": "dd/mm/yyyy",
           "active": false
@@ -1331,10 +1328,6 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 {
   "meta": "",
   "data": {
-    "wallet":{
-        "balance":900,
-        "spendable":400,
-    },
     "discount":200,
     "package_data": [
       {
