@@ -33,7 +33,58 @@ This document aims to provide a general understanding of the backend APIs and it
 
 ### Definitions:
 
-#### Generic Status: 200, 404, 500, 403
+#### Generic API Response to handle errors: 
+
+We will be selecting the following 5 Http Status codes to cover our response cases 
+
+##### Success: __200__
+{
+	"status": 200,
+}
+##### Bad Request: __400__
+
+Generic __400__ JSON:
+{
+	"status": 400,
+	"error":{
+		"message": "Bad Request",
+		"description": "Invalid Request Data"
+	}
+}
+##### Forbidden: __403__
+
+Generic __403__ JSON:
+>>> HTTP/1.1 422 Unprocessable Entity
+{
+	"status": 403,
+	"error":{
+		"message": "Forbidden Request",
+		"description": "You are not allowed to access this information"
+	}
+}
+
+##### Not Found: __404__
+
+Generic __404__ JSON:
+{
+	"status": 404,
+	"error":{
+		"message": "Not Found",
+		"description": "This response does not exist"
+	}
+}
+
+##### Server Side Error: __500__
+
+Generic __500__ JSON:
+{
+	"status": 500,
+	"error":{
+		"message": "Server Side Error",
+		"description": "There was some error with the API code",
+		"debug_message": //whatever message the catch exception decorator returns
+	}
+} 
 
 #### LoggedIn-Header:
 
@@ -111,6 +162,7 @@ A response is called Meta-Data-Response when it satisfies the following JSON sch
 	- Response:
 ```
 {
+    status:200,
     "meta":"",
     "data":[
         {
@@ -128,6 +180,27 @@ A response is called Meta-Data-Response when it satisfies the following JSON sch
     ]
 }
 ```
+```
+{
+    status:404,
+    "meta":"",
+    "data":[
+        {
+            "review_url":"https://www.fb.com/comment/123",
+            "image_url":"https://www.facebook.com/img/123",
+            "review":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo tempor incididunt utnsequat",
+            "reviewer":"Rita Singh"
+        },
+        {
+            "review_url":"https://www.fb.com/comment/123",
+            "image_url":"https://www.facebook.com/img/123",
+            "review":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo tempor incididunt utnsequat",
+            "reviewer":"Rita Singh"
+        }
+    ]
+}
+```
+
  
 2.
 	- API Name: School Partnership API
@@ -365,7 +438,7 @@ A response is called Meta-Data-Response when it satisfies the following JSON sch
 }
 ```
 
-6.        
+6.  
 	- API Name: City API
 	- Status: Need to be discuss URL
 	- URL: /utility/test/city/
