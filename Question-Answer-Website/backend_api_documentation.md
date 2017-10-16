@@ -546,7 +546,8 @@ We will be utilising the URL based Versioning i.e we will use the version number
     "city_data": [
       {
         "city_id": 1,
-        "name": "Mumbai",
+        "city_name": "Mumbai",
+        "price":550,
         "package_id": 1,
         "test_schedule": [
           {
@@ -565,7 +566,8 @@ We will be utilising the URL based Versioning i.e we will use the version number
       },
       {
         "city_id": 1,
-        "name": "Mumbai",
+        "city_name": "Mumbai",
+        "price":550,
         "package_id": 1,
         "test_schedule": [
           {
@@ -1093,10 +1095,6 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 {
 	"meta": "",
 	"data": {
-		"wallet": {
-			"name": "Wallet balance",
-			"balance": 11
-		},
 		"referral_earnings": 100,
 		"referral_message": {
 			"email": {
@@ -1114,13 +1112,14 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 }
 ```
 
-17. #CHECK_THIS
+18.
+	#CHECK_THIS
 	- API Name: Refer SMS API
 	- Status: Need to be discuss URL
 	- URL: /user/123/refer/getsms
 	- Method: POST
 	- Header: Loggedin-Platform-Header
-	- Request: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
+	- Request:
 ```
 {
 	"phone_number": 9999999999
@@ -1132,12 +1131,13 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 {
 	"meta": "",
 	"data": {
+		"sms_sent_success":true,
 		"message": "The refer link has been sent to"  
 	}
 }
 ```
 
-18.
+19.
 	- API Name: User Account Info
 	- Status: Need to be discuss URL
 	- URL: /user/123/account/
@@ -1188,7 +1188,7 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 }
 ```
 
-19.
+20.
 	- API Name: Mega Menu
 	- Status: Need to be discuss URL
 	- URL: /user/id/menu
@@ -1246,66 +1246,6 @@ Remark: If the customer has enrolled through the school the **amount** will be t
     ]
 }
 ```
-
-20.
-	- API Name: Test subscription
-	- Status: Need to be discuss URL
-	- URL: /product/test/
-	- Method: GET
-	- Header: Platform-Header
-	- Request:
-	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
-```
-{
-  "meta": "",
-  "data": {
-  "sample_paper": "https://www.facebook.com/img/123",
-  "test_data": [
-    {
-      "city_id": 1,
-      "city": "Mumbai",
-      "price": 550,
-      "package_id": 123,
-      "message": [
-        "Level 1: Scheduled in Nov - Dec 2017 (Exact date to depend on the centre)",
-        "Level 2: Scheduled in April 2018 (only for eligible candidates)"
-      ]
-    },
-    {
-      "city_id": 2,
-      "city": "Ahemdabad",
-      "price": 550,
-      "package_id": 124,
-      "message": [
-        "Level 1: Scheduled in Nov - Dec 2017 (Exact date to depend on the centre)",
-        "Level 2: Scheduled in April 2018 (only for eligible candidates)"
-      ]
-    },
-    {
-      "city_id": 3,
-      "city": "Pune",
-      "price": 550,
-      "package_id": 125,
-      "message": [
-        "Level 1: Scheduled in Nov - Dec 2017 (Exact date to depend on the centre)",
-        "Level 2: Scheduled in April 2018 (only for eligible candidates)"
-      ]
-    },
-    {
-      "city_id": 4,
-      "city": "Delhi",
-      "price": 550,
-      "package_id": 125,
-      "message": [
-        "Level 1: Scheduled in Nov - Dec 2017 (Exact date to depend on the centre)",
-        "Level 2: Scheduled in April 2018 (only for eligible candidates)"
-      ]
-    }
-  ]
-  }
-}
-```
-
 21.
 	- API Name: Order Review API
 	- Status: Need to be discuss URL
@@ -1353,13 +1293,13 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 }
 ```
  
-18
+22.
 	- API Name: Coupon API
 	- Status: Need to be discuss URL
 	- URL: /coupon/
 	- Method: POST
 	- Header: Loggedin-Platform-Header
-	- Request: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
+	- Request:
 ```
 {
   "Coupon_code": LOGIQ100,
@@ -1375,7 +1315,7 @@ Remark: If the customer has enrolled through the school the **amount** will be t
   }
 }
 ```
-
+23. 
 	- API Name: Checkout API
 	- Status: Need to be discuss URL
 	- URL: /user/123/checkout/
@@ -1403,13 +1343,13 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 }
 ```
 
-19
+23. 
 	- API Name: Payment Details API
 	- Status: Need to be discuss URL
 	- URL: /user/123/payment_details/
 	- Method: POST
 	- Header: Loggedin-Platform-Header
-	- Request: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
+	- Request: 
 ```
 {
   "order_id": 123
@@ -1427,6 +1367,9 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 }
 ```
 
+
+
+====================================================================================
 
 
 
