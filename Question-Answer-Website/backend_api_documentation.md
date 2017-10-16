@@ -38,12 +38,17 @@ This document aims to provide a general understanding of the backend APIs and it
 We will be selecting the following 5 Http Status codes to cover our response cases 
 
 ##### Success: __200__
+> __HTTP/1.1 200 OK__
+```
 {
 	"status": 200,
 }
+```
 ##### Bad Request: __400__
 
 Generic __400__ JSON:
+> __HTTP/1.1 400 Bad Request__
+```
 {
 	"status": 400,
 	"error":{
@@ -51,10 +56,12 @@ Generic __400__ JSON:
 		"description": "Invalid Request Data"
 	}
 }
+```
 ##### Forbidden: __403__
 
 Generic __403__ JSON:
->>> HTTP/1.1 422 Unprocessable Entity
+> __HTTP/1.1 403 Forbidden Request__
+```
 {
 	"status": 403,
 	"error":{
@@ -62,10 +69,12 @@ Generic __403__ JSON:
 		"description": "You are not allowed to access this information"
 	}
 }
-
+```
 ##### Not Found: __404__
 
 Generic __404__ JSON:
+> __HTTP/1.1 404 Not Found__
+```
 {
 	"status": 404,
 	"error":{
@@ -73,19 +82,21 @@ Generic __404__ JSON:
 		"description": "This response does not exist"
 	}
 }
-
-##### Server Side Error: __500__
+```
+##### Internal Server Error: __500__
 
 Generic __500__ JSON:
+> __HTTP/1.1 500 Internal Server Error__
+```
 {
 	"status": 500,
 	"error":{
-		"message": "Server Side Error",
+		"message": "Internal Server Error",
 		"description": "There was some error with the API code",
 		"debug_message": //whatever message the catch exception decorator returns
 	}
 } 
-
+```
 #### LoggedIn-Header:
 
 A header is defined as LoggedIn-Header when the header has the session token in it. This type of header is used for the user who is the registered user and has logged into the system.
