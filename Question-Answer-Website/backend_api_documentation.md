@@ -610,64 +610,64 @@ A response is called Meta-Data-Response when it satisfies the following JSON sch
 If the email input is not a valid email  
 ```
 {
-	"error": "invalid_request",
-	"sub_error": "invalid_argument",
-	"argument_name": "email",
-	"description": "invalid input format: email"
+	"meta":"",
+	"data":{
+		"error_message": "The email is not a valid email"
+	}
 }
 ```
 If a user with that email already exists  
 ```
 {
-	"error": "invalid_request",
-	"sub_error": "invalid_argument",
-	"argument_name": "email",
-	"description": "a user with email already exists"
+	"meta":"",
+	"data":{
+		"error_message": "A user with this email already exists"
+	}
 }
 ```
 If the mobile number is not a valid 10 digit number  
 ```
 {
-	"error": "invalid_request",
-	"sub_error": "invalid_argument",
-	"argument_name": "mobile_number",
-	"description": "invalid input type: mobile_number"
+	"meta":"",
+	"data":{
+		"error_message": "The mobile number is not a valid 10 digit number"
+	}
 }
 ```
 If the city id does not exist  
 ```
 {
-	"error": "invalid_request",
-	"sub_error": "invalid_argument",
-	"argument_name": "city_id",
-	"description": "city_id does not exist"
+	"meta":"",
+	"data":{
+		"error_message": "This city_id does not exist"
+	}
 }
 ```
 If the school name is invalid  
 ```
 {
-	"error": "invalid_request",
-	"sub_error": "invalid_argument",
-	"argument_name": "school",
-	"description": "school name is not in our database"
+	"meta":"",
+	"data":{
+		"error_message": "school name is not present in our system"
+	}
 }
 ```
 If the school name is valid but present in the city specified by the city_id  
 ```
 {
-	"error": "invalid_request",
-	"sub_error": "invalid_argument",
-	"argument_name": "school",
-	"description": "There is no such school name in the city you have selected"
+	"meta":"",
+	"data":{
+		"error_message": "There is no such school name in the city you have selected"
+	}
 }
 ```
 If the refer code is invalid  
 ```
 {
-	"error": "invalid_request",
-	"sub_error": "invalid_argument",
-	"argument_name": "refer_code",
-	"description": "The refer code is invalid"
+	"meta":"",
+	"data":{
+		"error_message": "The refer code is invalid"
+	}
 }
 ```
 
@@ -681,11 +681,11 @@ If the refer code is invalid
 ``` 
 {
   "full_name": "Nimesh Kiran Verma",
-  "mobile_number":"9911616971",
-  "email":"nimesh.aug11@gmail.com",
-  "city_id":1,
-  "class_id":1,
-  "school":"St Xaviers Sr Sec School",
+  "mobile_number": "9911616971",
+  "email": "nimesh.aug11@gmail.com",
+  "city_id": 1,
+  "class_id": 1,
+  "school": "St Xaviers Sr Sec School",
 }
 ``` 
 	- Response:
@@ -694,9 +694,65 @@ If the refer code is invalid
 {
   "meta": "",
   "data": {
-    "sample_test_paper":"Multipart PDF File",
-    "message":"Thanks for trying Us"
-
+    "sample_test_paper": "Multipart PDF File",
+    "message": "Thanks for trying Us"
+}
+```
+> __HTTP/1.1 404 Not Found__: Use Generic Response
+> __HTTP/1.1 400 Bad Request__: 
+>> #NOTE: These error cases need to be discussed separately as most of these can be handled in the font-end
+If the email input is not a valid email  
+```
+{
+	"meta":"",
+	"data":{
+		"error_message": "The email is not a valid email"
+	}
+}
+```
+If a user with that email already exists  
+```
+{
+	"meta":"",
+	"data":{
+		"error_message": "A user with this email already exists"
+	}
+}
+```
+If the mobile number is not a valid 10 digit number  
+```
+{
+	"meta":"",
+	"data":{
+		"error_message": "The mobile number is not a valid 10 digit number"
+	}
+}
+```
+If the city id does not exist  
+```
+{
+	"meta":"",
+	"data":{
+		"error_message": "This city_id does not exist"
+	}
+}
+```
+If the school name is invalid  
+```
+{
+	"meta":"",
+	"data":{
+		"error_message": "school name is not present in our system"
+	}
+}
+```
+If the school name is valid but present in the city specified by the city_id  
+```
+{
+	"meta":"",
+	"data":{
+		"error_message": "There is no such school name in the city you have selected"
+	}
 }
 ```
 
@@ -724,15 +780,15 @@ If the refer code is invalid
   }
 }
 ```
-
-Make error response and status
+> __HTTP/1.1 404 Not Found__: Use Generic Response
+> __HTTP/1.1 400 Bad Request__: 
+If the user credentials are not correct  
 ```
 {
-  "meta": "",
-  "data": {
-    "error_message": "",
-    "error_type": ""
-  }
+	"meta":"",
+	"data":{
+		"error_message": "The email or password entered are not correct"
+	}
 }
 ```
 
@@ -757,15 +813,15 @@ Make error response and status
   "message ":"Password Reset Link has been sent to your registered Email"
   }
 }
-```
-Make error response and status
+> __HTTP/1.1 404 Not Found__: Use Generic Response
+> __HTTP/1.1 400 Bad Request__: 
+If the email is not associated with any user in our database  
 ```
 {
-  "meta": "",
-  "data": {
-    "error_message": "",
-    "error_type": ""
-  }
+	"meta":"",
+	"data":{
+		"error_message": "This email is not associated with any user in our database"
+	}
 }
 ```
 
@@ -783,20 +839,12 @@ id=4675&code=uAm-wlA6HKsuZsZYREZlgfkJzhR7ikG3
 {
   "meta": "",
   "data": {
-  "email ":"nimesh.aug11@gmail.com"
+	  "email": "nimesh.aug11@gmail.com"
   }
 }
 ```
-Make error response and status
-```
-{
-  "meta": "",
-  "data": {
-    "error_message": "",
-    "error_type": ""
-  }
-}
-```
+> __HTTP/1.1 404 Not Found__: Use Generic Response
+
 13.2
 	- API Name: Reset Password API
 	- Status: Need to be discuss URL
@@ -822,6 +870,17 @@ Make error response and status
   }
 }
 ``` 
+> __HTTP/1.1 404 Not Found__: Use Generic Response
+> __HTTP/1.1 400 Bad Request__: 
+If the user email and token are not correct  
+```
+{
+	"meta":"",
+	"data":{
+		"error_message": "Your email or token are invalid"
+	}
+}
+```
 
 #### Loggedin APIs
 
