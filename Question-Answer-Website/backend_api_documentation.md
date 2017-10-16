@@ -845,9 +845,9 @@ If the email is not associated with any user in our database
 	- URL: /user/forgot_password_link/
 	- Method: GET
 	- Header: Platform-Header
-	- Request: Query Params
-id=4675&code=uAm-wlA6HKsuZsZYREZlgfkJzhR7ikG3 
+	- Request: Query Paramsid=4675&code=uAm-wlA6HKsuZsZYREZlgfkJzhR7ikG3 
 	- Response: __EXCEPTIONED_GENERIC_STATUS_RESPONSE_FORMAT__
+	
 > __HTTP/1.1 200 OK__
 ```
 {
@@ -906,6 +906,7 @@ If the user email and token are not correct
 	- Header: Loggedin-Platform-Header
 	- Request: Query Params None
 	- Response: __EXCEPTIONED_GENERIC_STATUS_RESPONSE_FORMAT__
+	
 > __HTTP/1.1 200 OK__
 ```
 {
@@ -952,9 +953,8 @@ If the user email and token are not correct
 	- Status: Need to be discuss URL
 	- URL: /user/profile/
 	- Method: POST
-Header: Loggedin-Platform-Header
-Why 	- are we returning the same thing
-	- Request: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
+	- Header: Loggedin-Platform-Header
+	- Request: 
 ```
 {
   "customer_id": 123,
