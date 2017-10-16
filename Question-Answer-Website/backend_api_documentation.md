@@ -104,6 +104,23 @@ Generic __500__ JSON:
 ```
 {} 
 ```
+##### 1.7. ALL_GENERIC_STATUS_RESPONSE_FORMAT
+__ALL_GENERIC_STATUS_RESPONSE_FORMAT__ implies that the given API satisfies the following:
+* Gives __HTTP_200_OK__ Response for 200
+* Gives __HTTP_400_BAD_REQUEST__ Response for 400
+* Gives __HTTP_403_FORBIDDEN__ Response for 403
+* Gives __HTTP_404_NOT_FOUND__ Response for 404
+* Gives __HTTP_500_INTERNAL_SERVER_ERROR__ Response for 500
+
+##### 1.8. EXCEPTIONED_GENERIC_STATUS_RESPONSE_FORMAT
+__ALL_GENERIC_STATUS_RESPONSE_FORMAT__ implies that the given API satisfies the following:
+* Gives __HTTP_200_OK__ Response for 200
+* Gives __HTTP_400_BAD_REQUEST__ Response for 400
+* Gives __HTTP_403_FORBIDDEN__ Response for 403
+* Gives __HTTP_404_NOT_FOUND__ Response for 404
+* Gives __HTTP_500_INTERNAL_SERVER_ERROR__ Response for 500
+* In case the API overrides the above condition its stated below
+
 #### 2. Response: 
 ##### 2.1. LoggedIn-Header:
 
@@ -169,7 +186,7 @@ We will be utilising the URL based Versioning i.e we will use the version number
 	- Method: GET
 	- Header: Platform-Header
 	- Request: No Query Params
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 > __HTTP/1.1 200 OK__
 ```
 {
@@ -190,8 +207,6 @@ We will be utilising the URL based Versioning i.e we will use the version number
     ]
 }
 ```
-> __HTTP/1.1 404 Not Found__: Use Generic Response
- 
 2.
 	- API Name: School Partnership API
 	- Status: Might not be required, need to be discussed
@@ -199,7 +214,7 @@ We will be utilising the URL based Versioning i.e we will use the version number
 	- Method: GET
 	- Header: Platform-Header
 	- Request: No Query Params
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 > __HTTP/1.1 200 OK__
 ```
 {
@@ -233,7 +248,6 @@ We will be utilising the URL based Versioning i.e we will use the version number
   ]
 }
 ```
-> __HTTP/1.1 404 Not Found__: Use Generic Response
 
 3.
 	- API Name: Contact Us Post API
@@ -241,7 +255,7 @@ We will be utilising the URL based Versioning i.e we will use the version number
 	- URL: /company/contact/
 	- Method: POST
 	- Header: Platform-Header
-	- Request:
+	- Request: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 ```
 {
     "name" : "Nimesh Verma",
@@ -253,7 +267,7 @@ We will be utilising the URL based Versioning i.e we will use the version number
   }
 }
 ```
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 > __HTTP/1.1 200 OK__
 ```
 {
@@ -263,7 +277,6 @@ We will be utilising the URL based Versioning i.e we will use the version number
   }
 }
 ```
-> __HTTP/1.1 404 Not Found__: Use Generic Response
 
 4. #CHECK: Do we still need this
 	- API Name: Captcha API
@@ -272,7 +285,7 @@ We will be utilising the URL based Versioning i.e we will use the version number
 	- Method: GET
 	- Header: Platform-Header
 	- Request: No Query Params
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 > __HTTP/1.1 200 OK__
 ```
 {
@@ -291,7 +304,7 @@ We will be utilising the URL based Versioning i.e we will use the version number
 	- Header: Platform-Header
 	- Request: No Query Params
 	- Remark: The content package data and the test package data can take every combination in the content + test case so we shouldn't send the package data again in the content + test case. The discount on the content + test case can be passed in the content + test column as a percentage amount and the front end can contain the logic to round of the figure so that the customer doesn't see prices in floating points.
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 > __HTTP/1.1 200 OK__ 
 
 ```
@@ -433,7 +446,6 @@ We will be utilising the URL based Versioning i.e we will use the version number
 	}
 }
 ```
-> __HTTP/1.1 404 Not Found__: Use Generic Response
 
 6.  
 	- API Name: City API
@@ -442,7 +454,7 @@ We will be utilising the URL based Versioning i.e we will use the version number
 	- Method: GET
 	- Header: Platform-Header
 	- Request: No Query Params
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 > __HTTP/1.1 200 OK__
 ```
 {
@@ -481,7 +493,6 @@ We will be utilising the URL based Versioning i.e we will use the version number
   ]
 }
 ```
-> __HTTP/1.1 404 Not Found__: Use Generic Response
 
 
 7.        
@@ -491,7 +502,7 @@ We will be utilising the URL based Versioning i.e we will use the version number
 	- Method: GET
 	- Header: Platform-Header
 	- Request: No Query Params
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 > __HTTP/1.1 200 OK__
 ```
 {
@@ -550,8 +561,6 @@ We will be utilising the URL based Versioning i.e we will use the version number
   ]
 }
 ```
-> __HTTP/1.1 404 Not Found__: Use Generic Response
-
 
 8.	- API Name: Test Schedule API
 	- Status: Need to be discuss URL
@@ -559,7 +568,7 @@ We will be utilising the URL based Versioning i.e we will use the version number
 	- Method: GET
 	- Header: Platform-Header
 	- Request: queryparams = city_id
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 > __HTTP/1.1 200 OK__
 ```
 {
@@ -585,7 +594,6 @@ We will be utilising the URL based Versioning i.e we will use the version number
   }
 }
 ```
-> __HTTP/1.1 404 Not Found__: Use Generic Response
 
 9.	- API Name: Registration API
 	- Status: Need to discuss URL
@@ -605,7 +613,7 @@ We will be utilising the URL based Versioning i.e we will use the version number
   "refer_code":"Mikin7332"
 }
 ```
-	- Response:
+	- Response: __EXCEPTIONED_GENERIC_STATUS_RESPONSE_FORMAT__
 > __HTTP/1.1 200 OK__
 ```
 {
@@ -699,7 +707,7 @@ If the refer code is invalid
   "school": "St Xaviers Sr Sec School",
 }
 ``` 
-	- Response:
+	- Response: __EXCEPTIONED_GENERIC_STATUS_RESPONSE_FORMAT__
 > __HTTP/1.1 200 OK__
 ```
 {
@@ -780,7 +788,7 @@ If the school name is valid but present in the city specified by the city_id
   "password":"password123"
 }
 ``` 
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 > __HTTP/1.1 200 OK__ 
 ```
 {
@@ -809,13 +817,13 @@ If the user credentials are not correct
 	- URL: /user/forgot_password/
 	- Method: POST
 	- Header: Platform-Header
-	- Request:
+	- Request: __EXCEPTIONED_GENERIC_STATUS_RESPONSE_FORMAT__
 ```
 {
   "email":"nimesh.aug11@gmail.com",
 }
 ``` 
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 > __HTTP/1.1 200 OK__
 ```
 {
@@ -824,6 +832,7 @@ If the user credentials are not correct
   "message ":"Password Reset Link has been sent to your registered Email"
   }
 }
+```
 > __HTTP/1.1 404 Not Found__: Use Generic Response
 > __HTTP/1.1 400 Bad Request__: 
 If the email is not associated with any user in our database  
@@ -844,7 +853,7 @@ If the email is not associated with any user in our database
 	- Header: Platform-Header
 	- Request: Query Params
 id=4675&code=uAm-wlA6HKsuZsZYREZlgfkJzhR7ikG3 
-	- Response:
+	- Response: __EXCEPTIONED_GENERIC_STATUS_RESPONSE_FORMAT__
 > __HTTP/1.1 200 OK__
 ```
 {
@@ -871,7 +880,7 @@ id=4675&code=uAm-wlA6HKsuZsZYREZlgfkJzhR7ikG3
   "password":"new_password"
 }
 ``` 
-	- Response:
+	- Response: __EXCEPTIONED_GENERIC_STATUS_RESPONSE_FORMAT__
 > __HTTP/1.1 200 OK__
 ```
 {
@@ -902,7 +911,7 @@ If the user email and token are not correct
 	- Method: GET
 	- Header: Loggedin-Platform-Header
 	- Request: Query Params None
-	- Response:
+	- Response: __EXCEPTIONED_GENERIC_STATUS_RESPONSE_FORMAT__
 > __HTTP/1.1 200 OK__
 ```
 {
@@ -951,7 +960,7 @@ If the user email and token are not correct
 	- Method: POST
 Header: Loggedin-Platform-Header
 Why 	- are we returning the same thing
-	- Request:
+	- Request: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 ```
 {
   "customer_id": 123,
@@ -964,7 +973,7 @@ Why 	- are we returning the same thing
   "profile_pic": "https://9gag.com/gag/a5nEdzg"
 }
 ```
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 > __HTTP/1.1 200 OK__
 ```
 {
@@ -1012,7 +1021,7 @@ Why 	- are we returning the same thing
 	- URL: /user/123/password/
 	- Method: POST
 	- Header: Loggedin-Platform-Header
-	- Request: 
+	- Request: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 ```
 {
     "customer_id": 123,
@@ -1020,7 +1029,7 @@ Why 	- are we returning the same thing
     "new_password": "newpass123"
 }
 ```
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 > __HTTP/1.1 200 OK__
 ```
 {
@@ -1037,7 +1046,7 @@ Why 	- are we returning the same thing
 	- Header: Loggedin-Platform-Header
 	- Request: None
 Remark: If the customer has enrolled through the school the **amount** will be the price paid to the school otherwise it will be price they paid after applying both special offer and the coupon code to us without subtracting the wallet amount
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 > __HTTP/1.1 200 OK__
 ```
 {
@@ -1086,7 +1095,7 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 	- Method: GET
 	- Header: Loggedin-Platform-Header
 	- Request: Query Params None
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 > __HTTP/1.1 200 OK__
 ```
 {
@@ -1119,13 +1128,13 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 	- URL: /user/123/refer/getsms
 	- Method: POST
 	- Header: Loggedin-Platform-Header
-	- Request:
+	- Request: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 ```
 {
 	"phone_number": 9999999999
 }
 ```
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 > __HTTP/1.1 200 OK__
 ```
 {
@@ -1143,7 +1152,7 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 	- Method: GET
 	- Header: Loggedin-Platform-Header
 	- Request: 
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 > __HTTP/1.1 200 OK__
 ```
 {
@@ -1189,7 +1198,7 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 	- Method: GET
 	- Header: Loggedin-Platform-Header
 	- Request:
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 ```
 {
   "meta": "",
@@ -1248,7 +1257,7 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 	- Method: GET
 	- Header: Platform-Header
 	- Request:
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 ```
 {
   "meta": "",
@@ -1306,7 +1315,7 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 	- URL: /user/123/order/review/
 	- Method: POST
 	- Header: Loggedin-Platform-Header
-	- Request:
+	- Request: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 ```
 {
   "package_ids": [
@@ -1317,7 +1326,7 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 //  "content": true
 }
 ```
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 ```
 {
   "meta": "",
@@ -1357,13 +1366,13 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 	- URL: /coupon/
 	- Method: POST
 	- Header: Loggedin-Platform-Header
-	- Request:
+	- Request: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 ```
 {
   "Coupon_code": LOGIQ100,
 }
 ```
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 ```
 {
   "meta": "",
@@ -1390,7 +1399,7 @@ Remark: If the customer has enrolled through the school the **amount** will be t
   "wallet_applied":true
 }
 ```
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 ```
 {
   "meta": "",
@@ -1407,14 +1416,14 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 	- URL: /user/123/payment_details/
 	- Method: POST
 	- Header: Loggedin-Platform-Header
-	- Request:
+	- Request: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 ```
 {
   "order_id": 123
   "state_id": 1
 }
 ```
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 ```
 {
   "meta": "",
@@ -1436,7 +1445,7 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 	- Method: GET
 	- Header: Loggedin-Platform-Header
 	- Request:None
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 ```
 {
   "meta": "",
@@ -1489,7 +1498,7 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request: None
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 ```
 {
   "meta": "",
@@ -1532,7 +1541,7 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request: None
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 ```
 {
   "meta": "",
@@ -1562,7 +1571,7 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request: None
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 ```
 {
   "meta": "",
@@ -1619,7 +1628,7 @@ pic_d
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request: None
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 ```
 {
   "meta": "",
@@ -1636,7 +1645,7 @@ pic_d
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request: None
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 ```
 {
   "meta": "",
@@ -1690,7 +1699,7 @@ pic_d
 }
 ```
 
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 ```
 {
   "meta": "",
@@ -1705,7 +1714,7 @@ pic_d
 	- Method: GET
 	- Header: Loggedin-Platform-Header
 	- Request: None
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 ```
 {
   "meta": "",
@@ -1741,7 +1750,7 @@ pic_d
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request: None
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 ```
 {
   "meta": "",
@@ -1757,7 +1766,7 @@ pic_d
 	- Method: GET
 	- Header: Loggedin-Platform-Header
 	- Request: None
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 ```
 {
   "meta": "",
@@ -1805,7 +1814,7 @@ pic_d
   "answer_id":"a"
 }
 ```
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 ```
 {
   "meta": "",
@@ -1819,7 +1828,7 @@ pic_d
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request: None
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 ```
 {
   "meta": "",
@@ -1984,7 +1993,7 @@ pic_d
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request: None
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 {
   "meta": "",
   "data": {
@@ -2071,7 +2080,7 @@ pic_d
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request: None
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 {
   "meta": "",
   "data": {
@@ -2197,7 +2206,7 @@ pic_d
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request: None
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 {
   "meta": "",
   "data": {
@@ -2475,7 +2484,7 @@ pic_d
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request: None
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 {
 
   "meta": "",
@@ -2563,7 +2572,7 @@ pic_d
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request: None
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 {
 
   "meta": "",
@@ -2612,7 +2621,7 @@ pic_d
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request: None
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 {
   "meta": "",
   "data": {
@@ -2630,7 +2639,7 @@ pic_d
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request: None
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 {
   "meta": "",
   "data": {
@@ -2647,7 +2656,7 @@ pic_d
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request: None
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 {
   "meta": "",
   "data": {
@@ -2715,7 +2724,7 @@ pic_d
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request: None
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 {
   "meta": "",
   "data": {
@@ -2736,7 +2745,7 @@ pic_d
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request: None
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 {
   "meta": "",
   "data": {
@@ -2788,7 +2797,7 @@ pic_d
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request: None
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 {
   "meta": "",
   "data": {
@@ -2866,7 +2875,7 @@ worksheet_id can be latest
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request: None
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 {
   "meta": "",
   "data": {
@@ -2882,7 +2891,7 @@ worksheet_id can be latest
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request: None
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 {
   "meta": "",
   "data": {
@@ -2932,7 +2941,7 @@ worksheet_id can be latest
   ]
 }
 
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 {
     "meta":"",
     "data":{
@@ -2966,7 +2975,7 @@ worksheet_id can be latest
 	- Method: GET
 	- Header: Loggedin-Platform-Header
 	- Request: None
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 ```javascript
 {
   "meta": "",
@@ -3004,7 +3013,7 @@ worksheet_id can be latest
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request: None
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 ```javascript
 {
   "meta": "",
@@ -3019,7 +3028,7 @@ worksheet_id can be latest
 	- Method: GET
 	- Header: Loggedin-Platform-Header
 	- Request: None
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 ```javascript
 {
   "meta": "",
@@ -3067,7 +3076,7 @@ worksheet_id can be latest
   "answer_id":"a"
 }
 ```
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 ```javascript
 {
   "meta": "",
@@ -3082,7 +3091,7 @@ worksheet_id can be latest
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request: None
-	- Response:
+	- Response: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
 ```javascript
 {
   "meta": "",
