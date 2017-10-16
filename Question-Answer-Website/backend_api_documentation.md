@@ -38,63 +38,49 @@ This document aims to provide a general understanding of the backend APIs and it
 We will be selecting the following 5 Http Status codes to cover our response cases 
 
 ##### Success: __200__
-> __HTTP/1.1 200 OK__
 ```
 {
-	"status": 200,
+	"meta":"",
+	"data":{
+
+	}	
 }
 ```
 ##### Bad Request: __400__
 
 Generic __400__ JSON:
-> __HTTP/1.1 400 Bad Request__
 ```
 {
-	"status": 400,
-	"error":{
-		"message": "Bad Request",
-		"description": "Invalid Request Data"
-	}
+	"error": "invalid_request",
+	"description": "there is something wrong with the request data"	
 }
 ```
 ##### Forbidden: __403__
 
 Generic __403__ JSON:
-> __HTTP/1.1 403 Forbidden Request__
 ```
 {
-	"status": 403,
-	"error":{
-		"message": "Forbidden Request",
-		"description": "You are not allowed to access this information"
-	}
+	"error": "forbidden_request",
+	"description": "You are not allowed to access this information"
 }
 ```
 ##### Not Found: __404__
 
 Generic __404__ JSON:
-> __HTTP/1.1 404 Not Found__
 ```
 {
-	"status": 404,
-	"error":{
-		"message": "Not Found",
-		"description": "This response does not exist"
-	}
+	"error": "not_found",
+	"description": "This response does not exist"
 }
 ```
 ##### Internal Server Error: __500__
-
+#CHECK: Use something else for runtime errors
 Generic __500__ JSON:
-> __HTTP/1.1 500 Internal Server Error__
 ```
 {
-	"status": 500,
-	"error":{
-		"message": "Internal Server Error",
-		"description": "There was some error with the API code",
-		"debug_message": //whatever message the catch exception decorator returns
-	}
+	"error": "internal_server_error",
+	"description": "There was some error with the API code",
+	"debug_message": //whatever message the catch exception decorator returns
 } 
 ```
 #### LoggedIn-Header:
@@ -136,15 +122,15 @@ In our system we will be having either:
 Loggedin-Platform-Header = Loggedin-Header + Platform-Header
 ```
 {
-"session_token":"logiqid_34_mYrmAIJA6TUDqfOvpfqez7fM9Mp11n2b",
-"source":"desktop_browser"
+	"session_token":"logiqid_34_mYrmAIJA6TUDqfOvpfqez7fM9Mp11n2b",
+	"source":"desktop_browser"
 }
 ```
 
 Platform-Header
 ```
 {
-"source":"desktop_browser"
+	"source":"desktop_browser"
 }
 ```
 
@@ -155,8 +141,10 @@ We will be utilising the URL based Versioning i.e we will use the version number
 A response is called Meta-Data-Response when it satisfies the following JSON schema
 ```
 {
-"meta" : "This is used to provide any meta information about the API, mostly not used by clients (browsers/apps)",
-"data" : { "data_key":"data value" }
+	"meta" : "This is used to provide any meta information about the API, mostly not used by clients (browsers/apps)",
+	"data" : { 
+				"data_key":"data value" 
+			 }
 }
 ```
 
@@ -171,9 +159,9 @@ A response is called Meta-Data-Response when it satisfies the following JSON sch
 	- Header: Platform-Header
 	- Request: No Query Params
 	- Response:
+> __HTTP/1.1 200 OK__
 ```
 {
-    status:200,
     "meta":"",
     "data":[
         {
@@ -191,27 +179,7 @@ A response is called Meta-Data-Response when it satisfies the following JSON sch
     ]
 }
 ```
-```
-{
-    status:404,
-    "meta":"",
-    "data":[
-        {
-            "review_url":"https://www.fb.com/comment/123",
-            "image_url":"https://www.facebook.com/img/123",
-            "review":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo tempor incididunt utnsequat",
-            "reviewer":"Rita Singh"
-        },
-        {
-            "review_url":"https://www.fb.com/comment/123",
-            "image_url":"https://www.facebook.com/img/123",
-            "review":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo tempor incididunt utnsequat",
-            "reviewer":"Rita Singh"
-        }
-    ]
-}
-```
-
+> __HTTP/1.1 404 Not Found__: Use Generic Response
  
 2.
 	- API Name: School Partnership API
@@ -221,38 +189,40 @@ A response is called Meta-Data-Response when it satisfies the following JSON sch
 	- Header: Platform-Header
 	- Request: No Query Params
 	- Response:
+> __HTTP/1.1 200 OK__
 ```
 {
   "meta": "",
   "data": [
-  {
-    "image_url": "https://www.facebook.com/img/123",
-    "school": "Kendriya Vidhyalaya 1",
-    "info": ""
-  },
-  {
-    "image_url": "https://www.facebook.com/img/123",
-    "school": "Kendriya Vidhyalaya 1",
-    "info": ""
-  },
-  {
-    "image_url": "https://www.facebook.com/img/123",
-    "school": "Kendriya Vidhyalaya 1",
-    "info": ""
-  },
-  {
-    "image_url": "https://www.facebook.com/img/123",
-    "school": "Kendriya Vidhyalaya 1",
-    "info": ""
-  },
-  {
-    "image_url": "https://www.facebook.com/img/123",
-    "school": "Kendriya Vidhyalaya 1",
-    "info": ""
-  }
+	  {
+	    "image_url": "https://www.facebook.com/img/123",
+	    "school": "Kendriya Vidhyalaya 1",
+	    "info": ""
+	  },
+	  {
+	    "image_url": "https://www.facebook.com/img/123",
+	    "school": "Kendriya Vidhyalaya 1",
+	    "info": ""
+	  },
+	  {
+	    "image_url": "https://www.facebook.com/img/123",
+	    "school": "Kendriya Vidhyalaya 1",
+	    "info": ""
+	  },
+	  {
+	    "image_url": "https://www.facebook.com/img/123",
+	    "school": "Kendriya Vidhyalaya 1",
+	    "info": ""
+	  },
+	  {
+	    "image_url": "https://www.facebook.com/img/123",
+	    "school": "Kendriya Vidhyalaya 1",
+	    "info": ""
+	  }
   ]
 }
 ```
+> __HTTP/1.1 404 Not Found__: Use Generic Response
 
 3.
 	- API Name: Contact Us Post API
@@ -273,6 +243,7 @@ A response is called Meta-Data-Response when it satisfies the following JSON sch
 }
 ```
 	- Response:
+> __HTTP/1.1 200 OK__
 ```
 {
     "meta" : "",
@@ -281,8 +252,9 @@ A response is called Meta-Data-Response when it satisfies the following JSON sch
   }
 }
 ```
+> __HTTP/1.1 404 Not Found__: Use Generic Response
 
-4.
+4. #CHECK: Do we still need this
 	- API Name: Captcha API
 	- Status: Need to be discuss the Usage and URL
 	- URL: /utility/captcha/
@@ -290,6 +262,7 @@ A response is called Meta-Data-Response when it satisfies the following JSON sch
 	- Header: Platform-Header
 	- Request: No Query Params
 	- Response:
+> __HTTP/1.1 200 OK__
 ```
 {
   "meta": "",
@@ -307,7 +280,8 @@ A response is called Meta-Data-Response when it satisfies the following JSON sch
 	- Header: Platform-Header
 	- Request: No Query Params
 	- Remark: The content package data and the test package data can take every combination in the content + test case so we shouldn't send the package data again in the content + test case. The discount on the content + test case can be passed in the content + test column as a percentage amount and the front end can contain the logic to round of the figure so that the customer doesn't see prices in floating points.
-	- Response: 
+	- Response:
+> __HTTP/1.1 200 OK__ 
 
 ```
 {
@@ -448,6 +422,7 @@ A response is called Meta-Data-Response when it satisfies the following JSON sch
 	}
 }
 ```
+> __HTTP/1.1 404 Not Found__: Use Generic Response
 
 6.  
 	- API Name: City API
@@ -457,6 +432,7 @@ A response is called Meta-Data-Response when it satisfies the following JSON sch
 	- Header: Platform-Header
 	- Request: No Query Params
 	- Response:
+> __HTTP/1.1 200 OK__
 ```
 {
   "meta": "",
@@ -494,6 +470,8 @@ A response is called Meta-Data-Response when it satisfies the following JSON sch
   ]
 }
 ```
+> __HTTP/1.1 404 Not Found__: Use Generic Response
+
 
 7.        
 	- API Name: Class API
@@ -503,6 +481,7 @@ A response is called Meta-Data-Response when it satisfies the following JSON sch
 	- Header: Platform-Header
 	- Request: No Query Params
 	- Response:
+> __HTTP/1.1 200 OK__
 ```
 {
   "meta": "",
@@ -560,6 +539,8 @@ A response is called Meta-Data-Response when it satisfies the following JSON sch
   ]
 }
 ```
+> __HTTP/1.1 404 Not Found__: Use Generic Response
+
 
 8.	- API Name: Test Schedule API
 	- Status: Need to be discuss URL
@@ -568,6 +549,7 @@ A response is called Meta-Data-Response when it satisfies the following JSON sch
 	- Header: Platform-Header
 	- Request: queryparams = city_id
 	- Response:
+> __HTTP/1.1 200 OK__
 ```
 {
   "meta": "",
@@ -592,6 +574,7 @@ A response is called Meta-Data-Response when it satisfies the following JSON sch
   }
 }
 ```
+> __HTTP/1.1 404 Not Found__: Use Generic Response
 
 9.	- API Name: Registration API
 	- Status: Need to discuss URL
@@ -612,6 +595,7 @@ A response is called Meta-Data-Response when it satisfies the following JSON sch
 }
 ```
 	- Response:
+> __HTTP/1.1 200 OK__
 ```
 {
   "meta": "",
@@ -621,14 +605,69 @@ A response is called Meta-Data-Response when it satisfies the following JSON sch
   }
 }
 ```
-Make error response and status
+> __HTTP/1.1 404 Not Found__: Use Generic Response
+> __HTTP/1.1 400 Bad Request__: 
+If the email input is not a valid email  
 ```
 {
-  "meta": "",
-  "data": {
-    "error_message": "",
-    "error_type": ""
-  }
+	"error": "invalid_request",
+	"sub_error": "invalid_argument",
+	"argument_name": "email",
+	"description": "invalid input format: email"
+}
+```
+If a user with that email already exists  
+```
+{
+	"error": "invalid_request",
+	"sub_error": "invalid_argument",
+	"argument_name": "email",
+	"description": "a user with email already exists"
+}
+```
+If the mobile number is not a valid 10 digit number  
+```
+{
+	"error": "invalid_request",
+	"sub_error": "invalid_argument",
+	"argument_name": "mobile_number",
+	"description": "invalid input type: mobile_number"
+}
+```
+If the city id does not exist  
+```
+{
+	"error": "invalid_request",
+	"sub_error": "invalid_argument",
+	"argument_name": "city_id",
+	"description": "city_id does not exist"
+}
+```
+If the school name is invalid  
+```
+{
+	"error": "invalid_request",
+	"sub_error": "invalid_argument",
+	"argument_name": "school",
+	"description": "school name is not in our database"
+}
+```
+If the school name is valid but present in the city specified by the city_id  
+```
+{
+	"error": "invalid_request",
+	"sub_error": "invalid_argument",
+	"argument_name": "school",
+	"description": "There is no such school name in the city you have selected"
+}
+```
+If the refer code is invalid  
+```
+{
+	"error": "invalid_request",
+	"sub_error": "invalid_argument",
+	"argument_name": "refer_code",
+	"description": "The refer code is invalid"
 }
 ```
 
@@ -650,6 +689,7 @@ Make error response and status
 }
 ``` 
 	- Response:
+> __HTTP/1.1 200 OK__
 ```
 {
   "meta": "",
@@ -673,7 +713,8 @@ Make error response and status
   "password":"password123"
 }
 ``` 
-	- Response: 
+	- Response:
+> __HTTP/1.1 200 OK__ 
 ```
 {
   "meta": "",
@@ -708,6 +749,7 @@ Make error response and status
 }
 ``` 
 	- Response:
+> __HTTP/1.1 200 OK__
 ```
 {
   "meta": "",
@@ -736,6 +778,7 @@ Make error response and status
 	- Request: Query Params
 id=4675&code=uAm-wlA6HKsuZsZYREZlgfkJzhR7ikG3 
 	- Response:
+> __HTTP/1.1 200 OK__
 ```
 {
   "meta": "",
@@ -770,6 +813,7 @@ Make error response and status
 }
 ``` 
 	- Response:
+> __HTTP/1.1 200 OK__
 ```
 {
   "meta": "",
@@ -789,6 +833,7 @@ Make error response and status
 	- Header: Loggedin-Platform-Header
 	- Request: Query Params None
 	- Response:
+> __HTTP/1.1 200 OK__
 ```
 {
   "meta": "",
@@ -850,6 +895,7 @@ Why 	- are we returning the same thing
 }
 ```
 	- Response:
+> __HTTP/1.1 200 OK__
 ```
 {
   "meta": "",
@@ -905,6 +951,7 @@ Why 	- are we returning the same thing
 }
 ```
 	- Response:
+> __HTTP/1.1 200 OK__
 ```
 {
   "meta": "",
@@ -921,6 +968,7 @@ Why 	- are we returning the same thing
 	- Request: None
 Remark: If the customer has enrolled through the school the **amount** will be the price paid to the school otherwise it will be price they paid after applying both special offer and the coupon code to us without subtracting the wallet amount
 	- Response:
+> __HTTP/1.1 200 OK__
 ```
 {
   "meta": "",
@@ -969,6 +1017,7 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 	- Header: Loggedin-Platform-Header
 	- Request: Query Params None
 	- Response:
+> __HTTP/1.1 200 OK__
 ```
 {
 	"meta": "",
@@ -1007,6 +1056,7 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 }
 ```
 	- Response:
+> __HTTP/1.1 200 OK__
 ```
 {
 	"meta": "",
@@ -1024,6 +1074,7 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 	- Header: Loggedin-Platform-Header
 	- Request: 
 	- Response:
+> __HTTP/1.1 200 OK__
 ```
 {
   "meta": "",
