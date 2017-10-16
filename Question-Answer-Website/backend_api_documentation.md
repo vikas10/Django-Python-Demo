@@ -839,7 +839,8 @@ If the email is not associated with any user in our database
 }
 ```
 
-13.1
+13.1.
+
 	- API Name: Reset Password API
 	- Status: Need to be discuss URL
 	- URL: /user/forgot_password_link/
@@ -859,7 +860,8 @@ If the email is not associated with any user in our database
 ```
 > __HTTP/1.1 404 Not Found__: Use Generic Response
 
-13.2
+13.2.
+
 	- API Name: Reset Password API
 	- Status: Need to be discuss URL
 	- URL: /user/forgot_password_link/
@@ -898,7 +900,8 @@ If the user email and token are not correct
 
 #### Loggedin APIs
 
-14.1
+14.1.
+
 	- API Name: Profile API
 	- Status: Need to be discuss URL
 	- URL: /user/123/profile/
@@ -948,7 +951,8 @@ If the user email and token are not correct
 }
 ```
 
-14.2
+14.2.
+
 	- API Name: Profile API
 	- Status: Need to be discuss URL
 	- URL: /user/profile/
@@ -1343,7 +1347,7 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 }
 ```
 
-23. 
+24. 
 	- API Name: Payment Details API
 	- Status: Need to be discuss URL
 	- URL: /user/123/payment_details/
