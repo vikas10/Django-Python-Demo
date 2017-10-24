@@ -183,6 +183,7 @@ We will be utilising the URL based Versioning i.e we will use the version number
 1.	
 	- API Name: Reviews API
 	- URL: /products/review/
+	- Comment: Review is a property of a product or a company, here review/rating is of the company itself, Should it belong to module named as company or logiqids?
 	- Method: GET
 	- Header: Platform-Header
 	- Request: No Query Params
@@ -211,6 +212,7 @@ We will be utilising the URL based Versioning i.e we will use the version number
 	- API Name: School Partnership API
 	- Status: Might not be required, need to be discussed
 	- URL: /products/school_partnership/
+	- Comment: Partnership is a property of a of the company itself, Should it belong to module named as company or logiqids?
 	- Method: GET
 	- Header: Platform-Header
 	- Request: No Query Params
@@ -253,6 +255,7 @@ We will be utilising the URL based Versioning i.e we will use the version number
 	- API Name: Contact Us Post API
 	- Status: Need to be discuss the URL
 	- URL: /company/contact/
+	- Comment: Contact info is a property of a of the company itself, Should it belong to module named as company or logiqids?
 	- Method: POST
 	- Header: Platform-Header
 	- Request: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
@@ -300,6 +303,7 @@ We will be utilising the URL based Versioning i.e we will use the version number
 5.	- API Name: Pricing API
 	- Status: Need to be discuss the Usage and URL
 	- URL: /product/pricing/
+	- Comment: Price is either a function of a Product independently or of the company's  info is a property of a of the company itself, Should it belong to module named as company or logiqids?
 	- Method: GET
 	- Header: Platform-Header
 	- Request: No Query Params
