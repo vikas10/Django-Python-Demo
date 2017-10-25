@@ -424,6 +424,7 @@ We will be utilising the URL based Versioning i.e we will use the version number
 	- API Name: City API
 	- Status: Need to be discuss URL
 	- URL: /utility/test/city/
+	- Comment: City is a generic property Should it belong to module named as company or logiqids or in Common or to Test?
 	- Method: GET
 	- Header: Platform-Header
 	- Request: No Query Params
@@ -472,6 +473,7 @@ We will be utilising the URL based Versioning i.e we will use the version number
 	- API Name: Class API
 	- Status: Need to be discuss URL
 	- URL: /user/class/
+	- Comment: City is a generic property Should it belong to module named as company or logiqids or in Common?
 	- Method: GET
 	- Header: Platform-Header
 	- Request: No Query Params
@@ -538,6 +540,7 @@ We will be utilising the URL based Versioning i.e we will use the version number
 8.	- API Name: Test Info API
 	- Status: Need to be discuss URL
 	- URL: /test/info/
+	- Comment: This belongs to Test module?
 	- Method: GET
 	- Header: Platform-Header
 	- Request: {}
@@ -596,6 +599,7 @@ We will be utilising the URL based Versioning i.e we will use the version number
 9.	- API Name: Registration API
 	- Status: Need to discuss URL
 	- URL: /user/registration/
+	- Comment: This  belong to module User?
 	- Method: POST
 	- Header: Platform-Header
 	- Request:
@@ -692,6 +696,7 @@ If the refer code is invalid
 	- API Name: Test Leads API
 	- Status: Need to be discuss URL
 	- URL: /user/lead/
+	- Comment: This belong to module Test?
 	- Method: POST
 	- Header: Platform-Header
 	- Request:
@@ -777,6 +782,7 @@ If the school name is valid but present in the city specified by the city_id
 	- API Name: Login API
 	- Status: Need to be discuss URL
 	- URL: /user/login/
+	- Comment: This  belong to module User?
 	- Method: POST
 	- Header: Platform-Header
 	- Request:
@@ -813,6 +819,7 @@ If the user credentials are not correct
 	- API Name: Forgot Password API
 	- Status: Need to be discuss URL
 	- URL: /user/forgot_password/
+	- Comment: This  belong to module User?
 	- Method: POST
 	- Header: Platform-Header
 	- Request: 
@@ -909,6 +916,7 @@ If the user email and token are not correct
 	- API Name: Profile API
 	- Status: Need to be discuss URL
 	- URL: /user/123/profile/
+	- Comment: This  belong to module User?
 	- Method: GET
 	- Header: Loggedin-Platform-Header
 	- Request: Query Params None
@@ -960,6 +968,7 @@ If the user email and token are not correct
 	- API Name: Profile API
 	- Status: Need to be discuss URL
 	- URL: /user/profile/
+	- Comment: This  belong to module User?
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request: 
@@ -1021,6 +1030,7 @@ If the user email and token are not correct
 	- API Name: Change Password API
 	- Status: Need to be discuss URL
 	- URL: /user/123/password/
+	- Comment: This  belong to module User?
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
@@ -1044,6 +1054,7 @@ If the user email and token are not correct
 	- API Name: Order API
 	- Status: Need to be discuss URL
 	- URL: /user/123/orders/
+	- Comment: This  belong to module User or a seperate Module Order?
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request: None
@@ -1094,6 +1105,7 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 	- API Name: Refer API
 	- Status: Need to be discuss URL
 	- URL: /user/123/refer/
+	- Comment: This  belong to module User?
 	- Method: GET
 	- Header: Loggedin-Platform-Header
 	- Request: Query Params None
@@ -1125,6 +1137,7 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 	- API Name: Refer SMS API
 	- Status: Need to be discuss URL
 	- URL: /user/123/refer/getsms
+	- Comment: This  belong to module User or in common?
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request:
@@ -1149,6 +1162,7 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 	- API Name: User Account Info
 	- Status: Need to be discuss URL
 	- URL: /user/123/account/
+	- Comment: This  belong to module User?
 	- Method: GET
 	- Header: Loggedin-Platform-Header
 	- Request: 
@@ -1200,6 +1214,7 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 	- API Name: Mega Menu
 	- Status: Need to be discuss URL
 	- URL: /user/id/menu
+	- Comment: This  belong to module User or Common?
 	- Method: GET
 	- Header: Loggedin-Platform-Header
 	- Request:
@@ -1258,6 +1273,7 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 	- API Name: Order Review API
 	- Status: Need to be discuss URL
 	- URL: /user/123/order/review/
+	- Comment: This  belong to module Order?
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
@@ -1305,6 +1321,7 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 	- API Name: Coupon API
 	- Status: Need to be discuss URL
 	- URL: /coupon/
+	- Comment: This  belong to module Common or Coupon or refer?
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request:
@@ -1327,6 +1344,7 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 	- API Name: Checkout API
 	- Status: Need to be discuss URL
 	- URL: /user/123/checkout/
+	- Comment: This  belong to module Order?
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request:
@@ -1355,6 +1373,7 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 	- API Name: Payment Details API
 	- Status: Need to be discuss URL
 	- URL: /user/123/payment_details/
+	- Comment: This  belong to module Order?
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request: 
