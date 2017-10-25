@@ -184,6 +184,7 @@ We will be utilising the URL based Versioning i.e we will use the version number
 	- API Name: Reviews API
 	- URL: /products/review/
 	- Comment: Review is a property of a product or a company, here review/rating is of the company itself, Should it belong to module named as company or logiqids?
+	- Module: Logiqids
 	- Method: GET
 	- Header: Platform-Header
 	- Request: No Query Params
@@ -213,6 +214,7 @@ We will be utilising the URL based Versioning i.e we will use the version number
 	- Status: Might not be required, need to be discussed
 	- URL: /products/school_partnership/
 	- Comment: Partnership is a property of a of the company itself, Should it belong to module named as company or logiqids?
+	- Module: Logiqids
 	- Method: GET
 	- Header: Platform-Header
 	- Request: No Query Params
@@ -256,6 +258,7 @@ We will be utilising the URL based Versioning i.e we will use the version number
 	- Status: Need to be discuss the URL
 	- URL: /company/contact/
 	- Comment: Contact info is a property of a of the company itself, Should it belong to module named as company or logiqids?
+	- Module: Logiqids
 	- Method: POST
 	- Header: Platform-Header
 	- Request: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
@@ -285,6 +288,7 @@ We will be utilising the URL based Versioning i.e we will use the version number
 	- API Name: Captcha API
 	- Status: Need to be discuss the Usage and URL
 	- URL: /utility/captcha/
+	- Module: Common
 	- Method: GET
 	- Header: Platform-Header
 	- Request: No Query Params
@@ -304,6 +308,7 @@ We will be utilising the URL based Versioning i.e we will use the version number
 	- Status: Need to be discuss the Usage and URL
 	- URL: /product/pricing/
 	- Comment: Price is either a function of a Product independently or of the company's  info is a property of a of the company itself, Should it belong to module named as company or logiqids?
+	- Module: Product
 	- Method: GET
 	- Header: Platform-Header
 	- Request: No Query Params
@@ -425,6 +430,7 @@ We will be utilising the URL based Versioning i.e we will use the version number
 	- Status: Need to be discuss URL
 	- URL: /utility/test/city/
 	- Comment: City is a generic property Should it belong to module named as company or logiqids or in Common or to Test?
+	- Module: Product
 	- Method: GET
 	- Header: Platform-Header
 	- Request: No Query Params
@@ -473,7 +479,8 @@ We will be utilising the URL based Versioning i.e we will use the version number
 	- API Name: Class API
 	- Status: Need to be discuss URL
 	- URL: /user/class/
-	- Comment: City is a generic property Should it belong to module named as company or logiqids or in Common?
+	- Comment: Class is a generic property Should it belong to module named as company or logiqids or in Common?
+	- Module: Product
 	- Method: GET
 	- Header: Platform-Header
 	- Request: No Query Params
@@ -541,6 +548,7 @@ We will be utilising the URL based Versioning i.e we will use the version number
 	- Status: Need to be discuss URL
 	- URL: /test/info/
 	- Comment: This belongs to Test module?
+	- Module: Test
 	- Method: GET
 	- Header: Platform-Header
 	- Request: {}
@@ -600,6 +608,7 @@ We will be utilising the URL based Versioning i.e we will use the version number
 	- Status: Need to discuss URL
 	- URL: /user/registration/
 	- Comment: This  belong to module User?
+	- Module: User
 	- Method: POST
 	- Header: Platform-Header
 	- Request:
@@ -697,6 +706,7 @@ If the refer code is invalid
 	- Status: Need to be discuss URL
 	- URL: /user/lead/
 	- Comment: This belong to module Test?
+	- Module: Test
 	- Method: POST
 	- Header: Platform-Header
 	- Request:
@@ -782,7 +792,8 @@ If the school name is valid but present in the city specified by the city_id
 	- API Name: Login API
 	- Status: Need to be discuss URL
 	- URL: /user/login/
-	- Comment: This  belong to module User?
+	- Comment: This belong to module User?
+	- Module: User
 	- Method: POST
 	- Header: Platform-Header
 	- Request:
@@ -820,6 +831,7 @@ If the user credentials are not correct
 	- Status: Need to be discuss URL
 	- URL: /user/forgot_password/
 	- Comment: This  belong to module User?
+	- Module: User
 	- Method: POST
 	- Header: Platform-Header
 	- Request: 
@@ -855,6 +867,7 @@ If the email is not associated with any user in our database
 	- API Name: Reset Password API
 	- Status: Need to be discuss URL
 	- URL: /user/forgot_password_link/
+	- Module: User
 	- Method: GET
 	- Header: Platform-Header
 	- Request: Query Paramsid=4675&code=uAm-wlA6HKsuZsZYREZlgfkJzhR7ikG3 
@@ -876,6 +889,7 @@ If the email is not associated with any user in our database
 	- API Name: Reset Password API
 	- Status: Need to be discuss URL
 	- URL: /user/forgot_password_link/
+	- Module: User
 	- Method: POST
 	- Header: Platform-Header
 	- Request:
@@ -917,6 +931,7 @@ If the user email and token are not correct
 	- Status: Need to be discuss URL
 	- URL: /user/123/profile/
 	- Comment: This  belong to module User?
+	- Module: User
 	- Method: GET
 	- Header: Loggedin-Platform-Header
 	- Request: Query Params None
@@ -969,6 +984,7 @@ If the user email and token are not correct
 	- Status: Need to be discuss URL
 	- URL: /user/profile/
 	- Comment: This  belong to module User?
+	- Module: User
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request: 
@@ -1031,6 +1047,7 @@ If the user email and token are not correct
 	- Status: Need to be discuss URL
 	- URL: /user/123/password/
 	- Comment: This  belong to module User?
+	- Module: User
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
@@ -1055,6 +1072,7 @@ If the user email and token are not correct
 	- Status: Need to be discuss URL
 	- URL: /user/123/orders/
 	- Comment: This  belong to module User or a seperate Module Order?
+	- Module: Order
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request: None
@@ -1106,6 +1124,7 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 	- Status: Need to be discuss URL
 	- URL: /user/123/refer/
 	- Comment: This  belong to module User?
+	- Module: User
 	- Method: GET
 	- Header: Loggedin-Platform-Header
 	- Request: Query Params None
@@ -1138,6 +1157,7 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 	- Status: Need to be discuss URL
 	- URL: /user/123/refer/getsms
 	- Comment: This  belong to module User or in common?
+	- Module: Common
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request:
@@ -1163,6 +1183,7 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 	- Status: Need to be discuss URL
 	- URL: /user/123/account/
 	- Comment: This  belong to module User?
+	- Module: User
 	- Method: GET
 	- Header: Loggedin-Platform-Header
 	- Request: 
@@ -1215,6 +1236,7 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 	- Status: Need to be discuss URL
 	- URL: /user/id/menu
 	- Comment: This  belong to module User or Common?
+	- Module: User
 	- Method: GET
 	- Header: Loggedin-Platform-Header
 	- Request:
@@ -1274,6 +1296,7 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 	- Status: Need to be discuss URL
 	- URL: /user/123/order/review/
 	- Comment: This  belong to module Order?
+	- Module: Order
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request: __ALL_GENERIC_STATUS_RESPONSE_FORMAT__
@@ -1322,6 +1345,7 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 	- Status: Need to be discuss URL
 	- URL: /coupon/
 	- Comment: This  belong to module Common or Coupon or refer?
+	- Module: Product
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request:
@@ -1345,6 +1369,7 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 	- Status: Need to be discuss URL
 	- URL: /user/123/checkout/
 	- Comment: This  belong to module Order?
+	- Module: Order
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request:
@@ -1374,6 +1399,7 @@ Remark: If the customer has enrolled through the school the **amount** will be t
 	- Status: Need to be discuss URL
 	- URL: /user/123/payment_details/
 	- Comment: This  belong to module Order?
+	- Module: Order
 	- Method: POST
 	- Header: Loggedin-Platform-Header
 	- Request: 
