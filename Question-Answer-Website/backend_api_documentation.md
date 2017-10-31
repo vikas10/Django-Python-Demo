@@ -441,22 +441,22 @@ We will be utilising the URL based Versioning i.e we will use the version number
   "meta": "",
   "data": [
   {
-    "id": 1,
+    "city_id": 1,
     "name": "Mumbai",
     "supported": true
   },
   {
-    "id": 2,
+    "city_id": 2,
     "name": "Pune",
     "supported": true
   },
   {
-    "id": 3,
+    "city_id": 3,
     "name": "Ahemdabad",
     "supported": true
   },
   {
-    "id": 4,
+    "city_id": 4,
     "name": "Nasik",
     "supported": true
   },
